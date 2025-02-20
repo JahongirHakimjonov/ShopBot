@@ -1,0 +1,521 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-14 11:48+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: apps/bot/handlers/cart.py:28 apps/bot/handlers/clear.py:30
+msgid "User not found."
+msgstr "Foydalanuvchi topilmadi."
+
+#: apps/bot/handlers/cart.py:33 apps/bot/handlers/cart.py:38
+#: apps/bot/handlers/clear.py:37
+#, fuzzy
+#| msgid "Cart item"
+msgid "Cart is empty."
+msgstr "Savatcha buyumi"
+
+#: apps/bot/handlers/cart.py:41
+msgid "pieces"
+msgstr "dona"
+
+#: apps/bot/handlers/cart.py:42 apps/bot/handlers/products.py:43
+#: apps/bot/handlers/products.py:81 apps/bot/handlers/products.py:127
+#: apps/bot/handlers/register.py:34 core/config/unfold_navigation.py:21
+msgid "Home"
+msgstr "Uy"
+
+#: apps/bot/handlers/cart.py:43 apps/bot/handlers/register.py:26
+msgid "Clear"
+msgstr "ravshan"
+
+#: apps/bot/handlers/cart.py:44 apps/bot/handlers/register.py:24
+#: apps/shop/models/order.py:50 core/config/unfold_navigation.py:98
+msgid "Order"
+msgstr "Tartib"
+
+#: apps/bot/handlers/cart.py:45
+msgid "Total"
+msgstr "Jami"
+
+#: apps/bot/handlers/cart.py:46
+msgid "Your cart"
+msgstr "Savatchangiz"
+
+#: apps/bot/handlers/clear.py:43
+msgid "Cart is cleared."
+msgstr "Savat tozalandi."
+
+#: apps/bot/handlers/donate.py:50
+msgid "Please select a donation amount:"
+msgstr "Xayriya miqdorini tanlang:"
+
+#: apps/bot/handlers/donate.py:77 apps/shop/models/order.py:10
+msgid "Payme"
+msgstr "Payme"
+
+#: apps/bot/handlers/donate.py:78
+msgid "Click"
+msgstr "Chertmoq"
+
+#: apps/bot/handlers/donate.py:81
+#, python-brace-format
+msgid ""
+"Click the button below to complete your donation amount is {order."
+"amount:.2f}:"
+msgstr ""
+"{order.amount:.2f} miqdoridagi xayriyangizni yakunlash uchun quyidagi "
+"tugmani bosing:"
+
+#: apps/bot/handlers/donate.py:84
+msgid "Thank you for your donation!"
+msgstr "Xayriyangiz uchun tashakkur!"
+
+#: apps/bot/handlers/language.py:50
+msgid "Language updated successfully!"
+msgstr "Til yangilandi!"
+
+#: apps/bot/handlers/products.py:33 apps/bot/handlers/products.py:71
+#: apps/bot/handlers/register.py:22 apps/bot/keyboard/home.py:8
+#: apps/shop/models/cart.py:25 apps/shop/models/cart.py:39
+#: core/config/unfold_navigation.py:109 core/config/unfold_navigation.py:144
+#: core/config/unfold_navigation.py:160
+msgid "Cart"
+msgstr "arava"
+
+#: apps/bot/handlers/products.py:46
+msgid "Please select a category:"
+msgstr "Turkumni tanlang:"
+
+#: apps/bot/handlers/products.py:84
+msgid "Please select a product:"
+msgstr "Mahsulotni tanlang:"
+
+#: apps/bot/handlers/products.py:108
+#, fuzzy
+#| msgid "Production"
+msgid "Product not found."
+msgstr "Ishlab chiqarish"
+
+#: apps/bot/handlers/products.py:112
+msgid "Product is out of stock."
+msgstr "Mahsulot zaxirada qolmagan."
+
+#: apps/bot/handlers/products.py:116
+msgid "Back"
+msgstr "Orqa"
+
+#: apps/bot/handlers/products.py:129
+#, python-brace-format
+msgid ""
+"{title}\n"
+"\n"
+"\t\t{description}\n"
+"\n"
+"Price: {price} UZS"
+msgstr "{title} {description} Narxi: {price} UZS"
+
+#: apps/bot/handlers/products.py:136
+msgid "Please select the quantity:"
+msgstr "Miqdorni tanlang:"
+
+#: apps/bot/handlers/products.py:156 apps/bot/handlers/products.py:160
+msgid "Invalid quantity selected."
+msgstr "Yaroqsiz miqdor tanlandi."
+
+#: apps/bot/handlers/products.py:169
+msgid "Product added to cart."
+msgstr "Mahsulot savatchaga kiritildi."
+
+#: apps/bot/handlers/register.py:20 apps/bot/keyboard/home.py:10
+#: apps/shop/admin/users.py:32 apps/shop/models/users.py:47
+msgid "Language"
+msgstr "Til"
+
+#: apps/bot/handlers/register.py:28 apps/bot/keyboard/home.py:7
+#: apps/shop/models/products.py:25 core/config/unfold_navigation.py:76
+msgid "Products"
+msgstr "Mahsulotlar"
+
+#: apps/bot/handlers/register.py:30 apps/bot/keyboard/home.py:9
+#: apps/shop/models/info.py:13 core/config/unfold_navigation.py:117
+msgid "Info"
+msgstr "Ma’lumot"
+
+#: apps/bot/handlers/register.py:32 apps/bot/keyboard/home.py:11
+#: apps/shop/models/donate.py:14 apps/shop/models/order.py:20
+#: core/config/unfold_navigation.py:84
+msgid "Donate"
+msgstr "Xayriya qilmoq"
+
+#: apps/bot/handlers/register.py:39
+msgid "Unknown command."
+msgstr "Noma’lum komanda."
+
+#: apps/bot/handlers/register.py:60
+msgid "Unknown action."
+msgstr "Noma’lum harakat."
+
+#: apps/bot/handlers/user.py:25
+msgid ""
+"Welcome to the bot! You can use the main menu to navigate the bot. If you "
+"have any questions, please contact the support team."
+msgstr ""
+"Botga xush kelibsiz! Botda harakatlanish uchun asosiy menyudan "
+"foydalanishingiz mumkin. Savollaringiz bo‘lsa, qo‘llab-quvvatlash jamoasiga "
+"murojaat qiling."
+
+#: apps/bot/handlers/user.py:31
+msgid "An error occurred."
+msgstr "Xatolik yuz berdi."
+
+#: apps/bot/middlewares/antiflood_middleware.py:18
+msgid "You are making request too often"
+msgstr "Juda ko‘p so‘rov yuboryapsiz"
+
+#: apps/shared/models/base.py:6
+msgid "Created at"
+msgstr ""
+
+#: apps/shared/models/base.py:7
+msgid "Updated at"
+msgstr ""
+
+#: apps/shared/views/dashboard.py:43 assets/templates/admin/index.html:8
+msgid "Dashboard"
+msgstr "Asboblar paneli"
+
+#: apps/shared/views/dashboard.py:44
+msgid "Analytics"
+msgstr "Analitika"
+
+#: apps/shared/views/dashboard.py:45
+msgid "Settings"
+msgstr "Sozlamalar"
+
+#: apps/shared/views/dashboard.py:48
+msgid "All"
+msgstr "hammasi"
+
+#: apps/shared/views/dashboard.py:50
+msgid "New"
+msgstr "Yangi"
+
+#: apps/shared/views/dashboard.py:160
+msgid "Last week revenue"
+msgstr "O‘tgan hafta daromadi"
+
+#: apps/shared/views/dashboard.py:178
+msgid "Last week expenses"
+msgstr "O‘tgan hafta xarajatlari"
+
+#: apps/shop/admin/users.py:42 apps/shop/models/users.py:54
+msgid "Role"
+msgstr "rol"
+
+#: apps/shop/admin/users.py:52 apps/shop/models/users.py:24
+msgid "Telegram ID"
+msgstr "Telegram ID"
+
+#: apps/shop/models/cart.py:13 apps/shop/models/users.py:15
+msgid "User"
+msgstr "Foydalanuvchi"
+
+#: apps/shop/models/cart.py:18 apps/shop/models/cart.py:51
+#: apps/shop/models/donate.py:9
+msgid "Amount"
+msgstr "Miqdor"
+
+#: apps/shop/models/cart.py:26
+msgid "Carts"
+msgstr "Aravalar"
+
+#: apps/shop/models/cart.py:45 apps/shop/models/order.py:21
+#: apps/shop/models/products.py:24
+msgid "Product"
+msgstr "Mahsulot"
+
+#: apps/shop/models/cart.py:47 apps/shop/models/products.py:21
+msgid "Quantity"
+msgstr "Miqdor"
+
+#: apps/shop/models/cart.py:58
+msgid "Cart item"
+msgstr "Savatcha buyumi"
+
+#: apps/shop/models/cart.py:59
+msgid "Cart items"
+msgstr "Savat buyumlari"
+
+#: apps/shop/models/category.py:8
+msgid "Name"
+msgstr "Nomi"
+
+#: apps/shop/models/category.py:9 apps/shop/models/users.py:49
+msgid "Is Active"
+msgstr "Faol"
+
+#: apps/shop/models/category.py:12 apps/shop/models/products.py:12
+#: core/config/unfold_navigation.py:68
+msgid "Category"
+msgstr "Toifa"
+
+#: apps/shop/models/category.py:13
+msgid "Categories"
+msgstr "Turkumlar"
+
+#: apps/shop/models/donate.py:11 apps/shop/models/info.py:10
+#: apps/shop/models/products.py:20
+msgid "Is active"
+msgstr "Faol"
+
+#: apps/shop/models/donate.py:15
+msgid "Donates"
+msgstr "Xayriya qiladi"
+
+#: apps/shop/models/info.py:8 apps/shop/models/news.py:8
+#: apps/shop/models/products.py:14
+msgid "Title"
+msgstr "Sarlavha"
+
+#: apps/shop/models/info.py:9 apps/shop/models/news.py:9
+#: apps/shop/models/products.py:15
+msgid "Description"
+msgstr "Tavsif"
+
+#: apps/shop/models/info.py:14
+msgid "Infos"
+msgstr "Ma’lumot"
+
+#: apps/shop/models/news.py:11 apps/shop/models/products.py:19
+msgid "Image"
+msgstr "Tasvir"
+
+#: apps/shop/models/news.py:15 apps/shop/models/news.py:16
+#: core/config/unfold_navigation.py:125
+msgid "News"
+msgstr "Yangiliklar"
+
+#: apps/shop/models/order.py:9
+msgid "Paynet"
+msgstr "Paynet"
+
+#: apps/shop/models/order.py:15
+msgid "Pending"
+msgstr "Kutilmoqda"
+
+#: apps/shop/models/order.py:16
+msgid "Completed"
+msgstr "Bajarildi"
+
+#: apps/shop/models/order.py:17
+msgid "Cancelled"
+msgstr "Bekor qilindi"
+
+#: apps/shop/models/order.py:41
+msgid "Payment Status"
+msgstr "To‘lov holati"
+
+#: apps/shop/models/order.py:51
+msgid "Orders"
+msgstr "Buyurtmalar"
+
+#: apps/shop/models/order.py:70
+msgid "Order Item"
+msgstr "Buyurtma buyumi"
+
+#: apps/shop/models/order.py:71
+msgid "Order Items"
+msgstr "Buyurtma elementlari"
+
+#: apps/shop/models/products.py:17
+msgid "Price"
+msgstr "Narx"
+
+#: apps/shop/models/users.py:13
+msgid "Admin"
+msgstr "Administrator"
+
+#: apps/shop/models/users.py:14
+msgid "Moderator"
+msgstr "Moderator"
+
+#: apps/shop/models/users.py:19 core/settings.py:102
+msgid "Uzbek"
+msgstr "o‘zbek"
+
+#: apps/shop/models/users.py:20
+#, fuzzy
+#| msgid "Russia"
+msgid "Russian"
+msgstr "Rossiya"
+
+#: apps/shop/models/users.py:29
+#, fuzzy
+#| msgid "User"
+msgid "Username"
+msgstr "Foydalanuvchi"
+
+#: apps/shop/models/users.py:32
+msgid "First Name"
+msgstr "Ismi"
+
+#: apps/shop/models/users.py:35
+#, fuzzy
+#| msgid "Name"
+msgid "Last Name"
+msgstr "Nomi"
+
+#: apps/shop/models/users.py:38
+#, fuzzy
+#| msgid "Name"
+msgid "Full Name"
+msgstr "Nomi"
+
+#: apps/shop/models/users.py:41
+msgid "Phone Number"
+msgstr "Telefon raqami"
+
+#: apps/shop/models/users.py:59 apps/shop/models/users.py:64
+#, fuzzy
+#| msgid "User"
+msgid "Bot User"
+msgstr "Foydalanuvchi"
+
+#: apps/shop/models/users.py:60 core/config/unfold_navigation.py:51
+#: core/config/unfold_navigation.py:54
+#, fuzzy
+#| msgid "User"
+msgid "Bot Users"
+msgstr "Foydalanuvchi"
+
+#: assets/templates/admin/base_site.html:3 assets/templates/admin/index.html:8
+msgid "Django site admin"
+msgstr "Django sayti administratori"
+
+#: assets/templates/admin/base_site.html:6 assets/templates/admin/index.html:18
+msgid "Django administration"
+msgstr "Django boshqaruvi"
+
+#: assets/templates/admin/index.html:35
+msgid "Last 7 days"
+msgstr "Oxirgi 7 kun"
+
+#: assets/templates/admin/index.html:51
+msgid "Product performance in last 28 days"
+msgstr "Oxirgi 28 kun ichida mahsulot unumdorligi"
+
+#: assets/templates/admin/index.html:56
+msgid "The most trending products in last 2 weeks"
+msgstr "Oxirgi 2 haftadagi eng ommabop mahsulotlar"
+
+#: assets/templates/admin/index.html:87
+msgid "Current system health"
+msgstr "Joriy tizim salomatligi"
+
+#: core/config/unfold.py:10
+msgid "Development"
+msgstr "Rivojlanish"
+
+#: core/config/unfold.py:12
+msgid "Production"
+msgstr "Ishlab chiqarish"
+
+#: core/config/unfold_navigation.py:29 core/config/unfold_navigation.py:40
+#, fuzzy
+#| msgid "User"
+msgid "Users"
+msgstr "Foydalanuvchi"
+
+#: core/config/unfold_navigation.py:32
+msgid "Groups"
+msgstr "Guruhlar"
+
+#: core/config/unfold_navigation.py:65
+msgid "MilliyTech Shop"
+msgstr "MilliyTech do‘koni"
+
+#: core/config/unfold_navigation.py:95
+#, fuzzy
+#| msgid "Vibe Shop Additional"
+msgid "MilliyTech Shop Additional"
+msgstr "Vibe Shop qo‘shimcha"
+
+#: core/config/unfold_navigation.py:148 core/config/unfold_navigation.py:164
+msgid "Cart Item"
+msgstr "Savatcha buyumi"
+
+#: core/settings.py:103
+msgid "Russia"
+msgstr "Rossiya"
+
+#~ msgid "Til"
+#~ msgstr "Til"
+
+#~ msgid "Rol"
+#~ msgstr "O‘rama"
+
+#~ msgid "Foydalanuvchi"
+#~ msgstr "Foydalanuvchi"
+
+#~ msgid "O'zbek tili"
+#~ msgstr "O‘zbek tili"
+
+#~ msgid "Rus tili"
+#~ msgstr "Rus tili"
+
+#~ msgid "Foydalanuvchi nomi"
+#~ msgstr "Foydalanuvchi nomi"
+
+#~ msgid "Ism"
+#~ msgstr "Ism"
+
+#~ msgid "Familiya"
+#~ msgstr "Familiya"
+
+#~ msgid "Ism va Familiya"
+#~ msgstr "Ism va familiya"
+
+#~ msgid "Telefon raqam"
+#~ msgstr "Telefon raqami"
+
+#~ msgid "Faolmi"
+#~ msgstr "Faolmi"
+
+#~ msgid "Bot Foydalanuvchisi"
+#~ msgstr "Bot foydalanuvchisi"
+
+#~ msgid "Bot Foydalanuvchilari"
+#~ msgstr "Bot foydalanuvchilari"
+
+#~ msgid "Bot Foydalnuvchisi"
+#~ msgstr "Bot foydalanuvchisi"
+
+#~ msgid "Bosh sahifa"
+#~ msgstr "Bosh sahifa"
+
+#~ msgid "Foydalanuvchilar"
+#~ msgstr "Foydalanuvchilar"
+
+#~ msgid "Guruhlar"
+#~ msgstr "Guruhlar"
+
+#~ msgid "Bot Foydalanuvchilar"
+#~ msgstr "Bot foydalanuvchilari"
+
+#~ msgid "Vibe Shop"
+#~ msgstr "Kayfiyat do‘koni"

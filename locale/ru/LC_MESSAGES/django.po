@@ -1,0 +1,504 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-14 11:48+0500\n"
+"PO-Revision-Date: 2025-02-14 11:46+0500\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: apps/bot/handlers/cart.py:28 apps/bot/handlers/clear.py:30
+msgid "User not found."
+msgstr "Пользователь не найден."
+
+#: apps/bot/handlers/cart.py:33 apps/bot/handlers/cart.py:38
+#: apps/bot/handlers/clear.py:37
+msgid "Cart is empty."
+msgstr "Корзина пуста."
+
+#: apps/bot/handlers/cart.py:41
+msgid "pieces"
+msgstr "штук"
+
+#: apps/bot/handlers/cart.py:42 apps/bot/handlers/products.py:43
+#: apps/bot/handlers/products.py:81 apps/bot/handlers/products.py:127
+#: apps/bot/handlers/register.py:34 core/config/unfold_navigation.py:21
+msgid "Home"
+msgstr "Дом"
+
+#: apps/bot/handlers/cart.py:43 apps/bot/handlers/register.py:26
+msgid "Clear"
+msgstr "Очистить"
+
+#: apps/bot/handlers/cart.py:44 apps/bot/handlers/register.py:24
+#: apps/shop/models/order.py:50 core/config/unfold_navigation.py:98
+msgid "Order"
+msgstr "Заказ"
+
+#: apps/bot/handlers/cart.py:45
+msgid "Total"
+msgstr "Всего"
+
+#: apps/bot/handlers/cart.py:46
+msgid "Your cart"
+msgstr "Ваша корзина"
+
+#: apps/bot/handlers/clear.py:43
+msgid "Cart is cleared."
+msgstr "Корзина очищена."
+
+#: apps/bot/handlers/donate.py:50
+msgid "Please select a donation amount:"
+msgstr "Пожалуйста, выберите сумму пожертвования:"
+
+#: apps/bot/handlers/donate.py:77 apps/shop/models/order.py:10
+msgid "Payme"
+msgstr "Payme"
+
+#: apps/bot/handlers/donate.py:78
+msgid "Click"
+msgstr "Click"
+
+#: apps/bot/handlers/donate.py:81
+#, python-brace-format
+msgid ""
+"Click the button below to complete your donation amount is {order."
+"amount:.2f}:"
+msgstr ""
+"Нажмите кнопку ниже, чтобы завершить сумму вашего пожертвования: {order."
+"amount:.2f}:"
+
+#: apps/bot/handlers/donate.py:84
+msgid "Thank you for your donation!"
+msgstr "Спасибо за ваше пожертвование!"
+
+#: apps/bot/handlers/language.py:50
+msgid "Language updated successfully!"
+msgstr "Язык успешно обновлен!"
+
+#: apps/bot/handlers/products.py:33 apps/bot/handlers/products.py:71
+#: apps/bot/handlers/register.py:22 apps/bot/keyboard/home.py:8
+#: apps/shop/models/cart.py:25 apps/shop/models/cart.py:39
+#: core/config/unfold_navigation.py:109 core/config/unfold_navigation.py:144
+#: core/config/unfold_navigation.py:160
+msgid "Cart"
+msgstr "Корзина"
+
+#: apps/bot/handlers/products.py:46
+msgid "Please select a category:"
+msgstr "Пожалуйста, выберите категорию:"
+
+#: apps/bot/handlers/products.py:84
+msgid "Please select a product:"
+msgstr "Пожалуйста, выберите товар:"
+
+#: apps/bot/handlers/products.py:108
+msgid "Product not found."
+msgstr "Товар не найден."
+
+#: apps/bot/handlers/products.py:112
+msgid "Product is out of stock."
+msgstr "Товара нет в наличии."
+
+#: apps/bot/handlers/products.py:116
+msgid "Back"
+msgstr "Назад"
+
+#: apps/bot/handlers/products.py:129
+#, python-brace-format
+msgid ""
+"{title}\n"
+"\n"
+"\t\t{description}\n"
+"\n"
+"Price: {price} UZS"
+msgstr "{title} {description} Цена: {price} UZS"
+
+#: apps/bot/handlers/products.py:136
+msgid "Please select the quantity:"
+msgstr "Пожалуйста, выберите количество:"
+
+#: apps/bot/handlers/products.py:156 apps/bot/handlers/products.py:160
+msgid "Invalid quantity selected."
+msgstr "Неверное количество выбрано."
+
+#: apps/bot/handlers/products.py:169
+msgid "Product added to cart."
+msgstr "Товар добавлен в корзину."
+
+#: apps/bot/handlers/register.py:20 apps/bot/keyboard/home.py:10
+#: apps/shop/admin/users.py:32 apps/shop/models/users.py:47
+msgid "Language"
+msgstr "Язык"
+
+#: apps/bot/handlers/register.py:28 apps/bot/keyboard/home.py:7
+#: apps/shop/models/products.py:25 core/config/unfold_navigation.py:76
+msgid "Products"
+msgstr "Продукты"
+
+#: apps/bot/handlers/register.py:30 apps/bot/keyboard/home.py:9
+#: apps/shop/models/info.py:13 core/config/unfold_navigation.py:117
+msgid "Info"
+msgstr "Инфо"
+
+#: apps/bot/handlers/register.py:32 apps/bot/keyboard/home.py:11
+#: apps/shop/models/donate.py:14 apps/shop/models/order.py:20
+#: core/config/unfold_navigation.py:84
+msgid "Donate"
+msgstr "Донат"
+
+#: apps/bot/handlers/register.py:39
+msgid "Unknown command."
+msgstr "Неизвестная команда."
+
+#: apps/bot/handlers/register.py:60
+msgid "Unknown action."
+msgstr "Неизвестное действие."
+
+#: apps/bot/handlers/user.py:25
+msgid ""
+"Welcome to the bot! You can use the main menu to navigate the bot. If you "
+"have any questions, please contact the support team."
+msgstr ""
+"Добро пожаловать в бот! Вы можете использовать главное меню для навигации по "
+"боту. Если у вас есть какие-либо вопросы, пожалуйста, свяжитесь с командой "
+"поддержки."
+
+#: apps/bot/handlers/user.py:31
+msgid "An error occurred."
+msgstr "Ошибка произошла."
+
+#: apps/bot/middlewares/antiflood_middleware.py:18
+msgid "You are making request too often"
+msgstr "Вы делаете запрос слишком часто"
+
+#: apps/shared/models/base.py:6
+msgid "Created at"
+msgstr "Создано в"
+
+#: apps/shared/models/base.py:7
+msgid "Updated at"
+msgstr "Обновлено в"
+
+#: apps/shared/views/dashboard.py:43 assets/templates/admin/index.html:8
+msgid "Dashboard"
+msgstr "Панель инструментов"
+
+#: apps/shared/views/dashboard.py:44
+msgid "Analytics"
+msgstr "Аналитика"
+
+#: apps/shared/views/dashboard.py:45
+msgid "Settings"
+msgstr "Настройки"
+
+#: apps/shared/views/dashboard.py:48
+msgid "All"
+msgstr "Все"
+
+#: apps/shared/views/dashboard.py:50
+msgid "New"
+msgstr "Новый"
+
+#: apps/shared/views/dashboard.py:160
+msgid "Last week revenue"
+msgstr "Доход за прошлую неделю"
+
+#: apps/shared/views/dashboard.py:178
+msgid "Last week expenses"
+msgstr "Расходы на прошлую неделю"
+
+#: apps/shop/admin/users.py:42 apps/shop/models/users.py:54
+msgid "Role"
+msgstr "Роль"
+
+#: apps/shop/admin/users.py:52 apps/shop/models/users.py:24
+msgid "Telegram ID"
+msgstr "Идентификатор Telegram"
+
+#: apps/shop/models/cart.py:13 apps/shop/models/users.py:15
+msgid "User"
+msgstr "Пользователь"
+
+#: apps/shop/models/cart.py:18 apps/shop/models/cart.py:51
+#: apps/shop/models/donate.py:9
+msgid "Amount"
+msgstr "Сумма"
+
+#: apps/shop/models/cart.py:26
+msgid "Carts"
+msgstr "Корзина"
+
+#: apps/shop/models/cart.py:45 apps/shop/models/order.py:21
+#: apps/shop/models/products.py:24
+msgid "Product"
+msgstr "Продукт"
+
+#: apps/shop/models/cart.py:47 apps/shop/models/products.py:21
+msgid "Quantity"
+msgstr "Количество"
+
+#: apps/shop/models/cart.py:58
+msgid "Cart item"
+msgstr "Предмет из корзины"
+
+#: apps/shop/models/cart.py:59
+msgid "Cart items"
+msgstr "Предметы из корзины"
+
+#: apps/shop/models/category.py:8
+msgid "Name"
+msgstr "Название"
+
+#: apps/shop/models/category.py:9 apps/shop/models/users.py:49
+msgid "Is Active"
+msgstr "Активно"
+
+#: apps/shop/models/category.py:12 apps/shop/models/products.py:12
+#: core/config/unfold_navigation.py:68
+msgid "Category"
+msgstr "Категория"
+
+#: apps/shop/models/category.py:13
+msgid "Categories"
+msgstr "Категории"
+
+#: apps/shop/models/donate.py:11 apps/shop/models/info.py:10
+#: apps/shop/models/products.py:20
+msgid "Is active"
+msgstr "Активно"
+
+#: apps/shop/models/donate.py:15
+msgid "Donates"
+msgstr "Пожертвования"
+
+#: apps/shop/models/info.py:8 apps/shop/models/news.py:8
+#: apps/shop/models/products.py:14
+msgid "Title"
+msgstr "Титул"
+
+#: apps/shop/models/info.py:9 apps/shop/models/news.py:9
+#: apps/shop/models/products.py:15
+msgid "Description"
+msgstr "Описание"
+
+#: apps/shop/models/info.py:14
+msgid "Infos"
+msgstr "Инфо"
+
+#: apps/shop/models/news.py:11 apps/shop/models/products.py:19
+msgid "Image"
+msgstr "Изображение"
+
+#: apps/shop/models/news.py:15 apps/shop/models/news.py:16
+#: core/config/unfold_navigation.py:125
+msgid "News"
+msgstr "Новости"
+
+#: apps/shop/models/order.py:9
+msgid "Paynet"
+msgstr "Paynet"
+
+#: apps/shop/models/order.py:15
+msgid "Pending"
+msgstr "В ожидании"
+
+#: apps/shop/models/order.py:16
+msgid "Completed"
+msgstr "Завершено"
+
+#: apps/shop/models/order.py:17
+msgid "Cancelled"
+msgstr "Отменено"
+
+#: apps/shop/models/order.py:41
+msgid "Payment Status"
+msgstr "Статус оплаты"
+
+#: apps/shop/models/order.py:51
+msgid "Orders"
+msgstr "Заказы"
+
+#: apps/shop/models/order.py:70
+msgid "Order Item"
+msgstr "Предмет заказа"
+
+#: apps/shop/models/order.py:71
+msgid "Order Items"
+msgstr "Предметы заказа"
+
+#: apps/shop/models/products.py:17
+msgid "Price"
+msgstr "Цена"
+
+#: apps/shop/models/users.py:13
+msgid "Admin"
+msgstr "Админ"
+
+#: apps/shop/models/users.py:14
+msgid "Moderator"
+msgstr "Модератор"
+
+#: apps/shop/models/users.py:19 core/settings.py:102
+msgid "Uzbek"
+msgstr "Узбекский"
+
+#: apps/shop/models/users.py:20
+msgid "Russian"
+msgstr "Русский"
+
+#: apps/shop/models/users.py:29
+msgid "Username"
+msgstr "Имя пользователя"
+
+#: apps/shop/models/users.py:32
+msgid "First Name"
+msgstr "Имя"
+
+#: apps/shop/models/users.py:35
+msgid "Last Name"
+msgstr "Фамилия"
+
+#: apps/shop/models/users.py:38
+msgid "Full Name"
+msgstr "Полное имя"
+
+#: apps/shop/models/users.py:41
+msgid "Phone Number"
+msgstr "Номер телефона"
+
+#: apps/shop/models/users.py:59 apps/shop/models/users.py:64
+msgid "Bot User"
+msgstr "Пользователь бота"
+
+#: apps/shop/models/users.py:60 core/config/unfold_navigation.py:51
+#: core/config/unfold_navigation.py:54
+msgid "Bot Users"
+msgstr "Пользователь бота"
+
+#: assets/templates/admin/base_site.html:3 assets/templates/admin/index.html:8
+msgid "Django site admin"
+msgstr "Администратор сайта Django"
+
+#: assets/templates/admin/base_site.html:6 assets/templates/admin/index.html:18
+msgid "Django administration"
+msgstr "Администрация джанго"
+
+#: assets/templates/admin/index.html:35
+msgid "Last 7 days"
+msgstr "Последние 7 дней"
+
+#: assets/templates/admin/index.html:51
+msgid "Product performance in last 28 days"
+msgstr "Производительность продукта за последние 28 дней"
+
+#: assets/templates/admin/index.html:56
+msgid "The most trending products in last 2 weeks"
+msgstr "Самые популярные товары за последние 2 недели"
+
+#: assets/templates/admin/index.html:87
+msgid "Current system health"
+msgstr "Текущее состояние системы"
+
+#: core/config/unfold.py:10
+msgid "Development"
+msgstr "Development"
+
+#: core/config/unfold.py:12
+msgid "Production"
+msgstr "Production"
+
+#: core/config/unfold_navigation.py:29 core/config/unfold_navigation.py:40
+msgid "Users"
+msgstr "Пользователи"
+
+#: core/config/unfold_navigation.py:32
+msgid "Groups"
+msgstr "Группы"
+
+#: core/config/unfold_navigation.py:65
+msgid "MilliyTech Shop"
+msgstr "Магазин MilliyTech"
+
+#: core/config/unfold_navigation.py:95
+msgid "MilliyTech Shop Additional"
+msgstr "Дополнительный Vibe Shop"
+
+#: core/config/unfold_navigation.py:148 core/config/unfold_navigation.py:164
+msgid "Cart Item"
+msgstr "Предмет из корзины"
+
+#: core/settings.py:103
+msgid "Russia"
+msgstr "Россия"
+
+#~ msgid "Til"
+#~ msgstr "Кронштейн"
+
+#~ msgid "Rol"
+#~ msgstr "Ролик"
+
+#~ msgid "Foydalanuvchi"
+#~ msgstr "Пользователь"
+
+#~ msgid "O'zbek tili"
+#~ msgstr "Узбекский язык"
+
+#~ msgid "Rus tili"
+#~ msgstr "Русский язык"
+
+#~ msgid "Foydalanuvchi nomi"
+#~ msgstr "Имя пользователя"
+
+#~ msgid "Ism"
+#~ msgstr "Имя"
+
+#~ msgid "Familiya"
+#~ msgstr "Фамилия"
+
+#~ msgid "Ism va Familiya"
+#~ msgstr "Имя и фамилия"
+
+#~ msgid "Telefon raqam"
+#~ msgstr "Номер телефона"
+
+#~ msgid "Faolmi"
+#~ msgstr "Фаолми"
+
+#~ msgid "Bot Foydalanuvchisi"
+#~ msgstr "Пользователь бота"
+
+#~ msgid "Bot Foydalanuvchilari"
+#~ msgstr "Пользователи бота"
+
+#~ msgid "Bot Foydalnuvchisi"
+#~ msgstr "Пользователь бота"
+
+#~ msgid "Bosh sahifa"
+#~ msgstr "Главная страница"
+
+#~ msgid "Foydalanuvchilar"
+#~ msgstr "Пользователи"
+
+#~ msgid "Guruhlar"
+#~ msgstr "Группы"
+
+#~ msgid "Bot Foydalanuvchilar"
+#~ msgstr "Пользователи бота"
+
+#~ msgid "Vibe Shop"
+#~ msgstr "Виб-магазин"

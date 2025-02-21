@@ -1,7 +1,9 @@
+import re
+
 from django.utils.translation import activate, gettext as _
 from telebot import TeleBot
 from telebot.types import Message, CallbackQuery
-import re
+
 from apps.bot.handlers.cart import (
     handle_cart,
     handle_cart_selection,
@@ -20,6 +22,7 @@ from apps.bot.handlers.help import handle_help
 from apps.bot.handlers.info import handle_info
 from apps.bot.handlers.language import handle_language, handle_language_selection
 from apps.bot.handlers.order import handle_order, handle_payment
+from apps.bot.handlers.privacy import handle_privacy
 from apps.bot.handlers.products import handle_category
 from apps.bot.handlers.user import any_user
 from apps.bot.keyboard import get_main_buttons
@@ -50,6 +53,8 @@ def handle_message(message: Message, bot: TeleBot):
         handle_help(message, bot)
     elif re.match(r"№\d+ -", message.text):
         handle_cart_selection(message, bot)
+    elif message.text == "/privacy":
+        handle_privacy(message, bot)
     else:
         logger.info(f"User {message.from_user.id} sent a message.")
         logger.info(f"User {message.text} sent a message.")

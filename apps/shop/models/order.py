@@ -30,7 +30,9 @@ class Order(AbstractBaseModel):
         choices=Status,
         default=Status.PENDING,
     )
-    amount = models.DecimalField(max_digits=100, decimal_places=2)
+    amount = models.DecimalField(
+        max_digits=100, decimal_places=2, default=0, null=True, blank=True
+    )
     user = models.ForeignKey(BotUsers, on_delete=models.CASCADE)
     latitude = models.FloatField(null=True, blank=True)
     longitude = models.FloatField(null=True, blank=True)

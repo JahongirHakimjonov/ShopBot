@@ -174,4 +174,20 @@ TABS = [
             },
         ],
     },
+    {
+        "models": [
+            "shop.news",
+            "shop.newsbutton",
+        ],
+        "items": [
+            {
+                "title": _("News"),
+                "link": reverse_lazy("admin:shop_news_changelist"),
+            },
+            {
+                "title": _("News Button"),
+                "link": reverse_lazy("admin:shop_newsbutton_changelist"),
+            },
+        ],
+    },
 ]

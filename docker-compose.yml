@@ -13,7 +13,7 @@ services:
       - ${PORT:-8001}:8000
     depends_on:
       - pgbouncer
-      - rabbitmq
+#      - rabbitmq
       - redis
 
   bot:
@@ -25,6 +25,7 @@ services:
       - .:/app
     depends_on:
       - web
+      - redis
     restart: always
 
   db:
@@ -72,19 +73,19 @@ services:
     image: redis:latest
     restart: always
 
-  rabbitmq:
-    image: rabbitmq:management
-    env_file:
-      - .env
-    restart: always
-    environment:
-      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
-      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
-    ports:
-      - ${RABBITMQ_PORT:-15672}:15672
-      - ${AMQP_PORT:-5672}:5672
-    volumes:
-      - rabbitmq:/var/lib/rabbitmq
+#  rabbitmq:
+#    image: rabbitmq:management
+#    env_file:
+#      - .env
+#    restart: always
+#    environment:
+#      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
+#      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+#    ports:
+#      - ${RABBITMQ_PORT:-15672}:15672
+#      - ${AMQP_PORT:-5672}:5672
+#    volumes:
+#      - rabbitmq:/var/lib/rabbitmq
 
   celery_worker:
     build:
@@ -98,7 +99,7 @@ services:
       - .env
     depends_on:
       - redis
-      - rabbitmq
+#      - rabbitmq
       - pgbouncer
 
 #  celery_beat:
@@ -138,5 +139,5 @@ volumes:
     driver: local
   pgbouncer_data:
     driver: local
-  rabbitmq:
-    driver: local
+#  rabbitmq:
+#    driver: local

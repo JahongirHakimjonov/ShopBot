@@ -34,7 +34,7 @@ def handle_cart(message: Message, bot: TeleBot):
         is_active=True,
     )
 
-    logger.info(f"User {user_id} selected a product category.")
+    logger.info(f"User {user_id} selected a handle cart.")
 
     user = BotUsers.objects.filter(telegram_id=user_id).first()
     if not user:
@@ -107,22 +107,29 @@ def update_cart_message(bot, call, item):
     keyboard = build_cart_item_keyboard(item)
     total_text = _("Total amount")
     pieces_text = _("pieces")
-    caption = (
+    new_caption = (
         f"{item.product.title}\n\n\t\t{item.product.description}\n\n"
         f"{total_text}: *{int(float(item.amount)):,} UZS*\n\n"
         f"{item.quantity} {pieces_text}"
     ).replace(",", " ")
 
-    try:
-        bot.edit_message_caption(
-            chat_id=call.message.chat.id,
-            message_id=call.message.message_id,
-            caption=caption,
-            reply_markup=keyboard,
-            parse_mode="Markdown",
+    current_caption = call.message.caption
+
+    if new_caption != current_caption:
+        try:
+            bot.edit_message_caption(
+                chat_id=call.message.chat.id,
+                message_id=call.message.message_id,
+                caption=new_caption,
+                reply_markup=keyboard,
+                parse_mode="Markdown",
+            )
+        except Exception as e:
+            logger.error(f"Error editing message: {e}")
+    else:
+        logger.info(
+            "New message content is the same as the current content. No update needed."
         )
-    except Exception as e:
-        logger.error(f"Error editing message: {e}")
 
 
 def handle_cart_selection(message, bot: TeleBot):

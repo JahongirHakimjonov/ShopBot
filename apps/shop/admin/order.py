@@ -43,7 +43,7 @@ class OrderAdmin(ModelAdmin):
         return obj.status, obj.get_status_display()
 
     @display(
-        description=_("Status"),
+        description=_("Payment Method"),
         label={
             PaymentMethodChoices.PAYME: "primary",
             PaymentMethodChoices.PAYNET: "primary",
@@ -54,7 +54,7 @@ class OrderAdmin(ModelAdmin):
         return obj.payment_method, obj.get_payment_method_display()
 
     @display(
-        description=_("Status"),
+        description=_("Order Type"),
         label={
             Order.OrderType.PRODUCT: "info",
             Order.OrderType.DONATE: "info",

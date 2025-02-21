@@ -19,7 +19,7 @@ from apps.bot.handlers.donate import (
 from apps.bot.handlers.help import handle_help
 from apps.bot.handlers.info import handle_info
 from apps.bot.handlers.language import handle_language, handle_language_selection
-from apps.bot.handlers.order import handle_order
+from apps.bot.handlers.order import handle_order, handle_payment
 from apps.bot.handlers.products import handle_category
 from apps.bot.handlers.user import any_user
 from apps.bot.keyboard import get_main_buttons
@@ -87,6 +87,8 @@ def handle_callback_query(call: CallbackQuery, bot: TeleBot):
         clear_handler(call, bot)
     elif call.data.startswith("save_"):
         save_handler(call, bot)
+    elif call.data == "payme" or call.data == "click":
+        handle_payment(call, bot)
     else:
         bot.answer_callback_query(call.id, _("Unknown action."))
         logger.info(f"User {call.from_user.id} performed an unknown action.")

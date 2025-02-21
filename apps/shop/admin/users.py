@@ -14,6 +14,7 @@ class BotUsersAdmin(ModelAdmin):
         "username",
         "language_code_with_color",
         "role_with_color",
+        "is_active",
         "created_at",
     )
     search_fields = (

@@ -30,7 +30,7 @@ from apps.bot.utils.language import set_language_code
 
 def handle_message(message: Message, bot: TeleBot):
     activate(set_language_code(message.from_user.id))
-    if message.text == _("Language"):
+    if message.text == _("Language") or message.text == "/language":
         handle_language(message, bot)
     elif message.text == _("Cart"):
         handle_cart(message, bot)
@@ -44,7 +44,7 @@ def handle_message(message: Message, bot: TeleBot):
         handle_info(message, bot)
     elif message.text == _("Donate"):
         handle_donate(message, bot)
-    elif message.text == _("Home"):
+    elif message.text == _("Home") or message.text == "/start":
         any_user(message, bot)
     elif message.text == "/help":
         handle_help(message, bot)
@@ -52,6 +52,7 @@ def handle_message(message: Message, bot: TeleBot):
         handle_cart_selection(message, bot)
     else:
         logger.info(f"User {message.from_user.id} sent a message.")
+        logger.info(f"User {message.text} sent a message.")
         bot.send_message(
             message.chat.id, _("Unknown command."), reply_markup=get_main_buttons()
         )

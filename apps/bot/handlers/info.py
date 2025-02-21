@@ -27,6 +27,9 @@ def handle_info(message: Message, bot: TeleBot):
     inline_keyboard.add(inline_button)
 
     infos = Info.objects.filter(is_active=True)
+    if not infos:
+        bot.send_message(message.chat.id, _("No info available."))
+        return
     for info in infos:
         caption = f"*{info.title}*\n\n{info.description}"
         bot.send_photo(

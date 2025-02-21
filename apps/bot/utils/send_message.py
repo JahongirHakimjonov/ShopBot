@@ -1,8 +1,11 @@
 import pathlib
 from typing import Optional, Union
 
+from django.utils.translation import activate
 from telebot import TeleBot
 from telebot.types import InlineKeyboardMarkup, InputFile
+
+from apps.bot.utils.language import set_language_code
 
 
 def send_reply(
@@ -12,6 +15,7 @@ def send_reply(
     reply_markup: Optional[InlineKeyboardMarkup] = None,
     image: Optional[Union[str, InputFile]] = None,
 ) -> None:
+
     common_args = {
         "chat_id": user_id,
         "parse_mode": "Markdown",

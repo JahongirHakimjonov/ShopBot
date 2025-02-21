@@ -30,6 +30,10 @@ def handle_category(message: Message, bot: TeleBot):
         product_count=Count("products", filter=Q(products__quantity__gt=0))
     ).filter(product_count__gt=0, is_active=True)
 
+    if not categories:
+        bot.send_message(message.chat.id, _("No products available."))
+        return
+
     keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
     keyboard.add(KeyboardButton(text=_("Cart")))
     row = []

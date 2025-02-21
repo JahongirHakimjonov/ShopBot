@@ -13,6 +13,7 @@ THIRD_PARTY_APPS = [
     "drf_spectacular",
     "drf_spectacular_sidecar",
     "payme",
+    "click_up",
 ]
 
 DEFAULT_APPS = [

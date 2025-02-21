@@ -1,4 +1,5 @@
 from django.utils.translation import activate
+from django.utils.translation import gettext as _
 from telebot import TeleBot
 from telebot.types import Message
 
@@ -20,6 +21,9 @@ def handle_help(message: Message, bot: TeleBot):
     logger.info(f"User {message.from_user.id} selected a help.")
 
     helps = Help.objects.filter(is_active=True)
+    if not helps:
+        bot.send_message(message.chat.id, _("No help available."))
+        return
     for help in helps:
         text = f"*{help.title}*\n\n{help.description}"
         bot.send_message(

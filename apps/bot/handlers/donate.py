@@ -40,6 +40,8 @@ def send_donation_selection(
     Build the donation selection message and keyboard.
     """
     donate_prices = Donate.objects.filter(is_active=True)
+    if not donate_prices.exists():
+        return _("No donation options available."), None
     keyboard = InlineKeyboardMarkup()
     row = []
     for index, donate in enumerate(donate_prices):

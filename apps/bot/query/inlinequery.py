@@ -48,9 +48,8 @@ def query_text(bot, query):
                 description=f"{int(float(product.price)):,} UZS".replace(",", " "),
                 thumbnail_url=thumbnail_url,
                 input_message_content=InputTextMessageContent(
-                    message_text=f"*{product.title}*\n\n\t\t{product.description}\n\n{int(float(product.price)):,} UZS [ ]({thumbnail_url})".replace(
-                        ",", " "
-                    ),
+                    message_text=f"*{product.title}*\n\n{product.description}\n\n{int(float(product.price)):,} UZS [ ]({thumbnail_url})".replace(
+                        ",", " "),
                     parse_mode="Markdown",
                     link_preview_options=link_preview_options,
                 ),

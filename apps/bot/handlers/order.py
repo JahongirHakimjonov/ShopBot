@@ -214,26 +214,26 @@ def handle_payment(call: CallbackQuery, bot: TeleBot) -> None:
     # Clean up temporary user data
     delete_user_data(user_id)
 
-    your_cart_text = _("Products")
-    total_text = _("Total")
-
-    items_text = []
-    for index, item in enumerate(cart_items, start=1):
-        items_text.append(
-            f"№{index} - *{item.product.title}*\n{item.quantity} x {int(float(item.product.price)):,} = *{int(float(item.amount)):,} UZS*".replace(
-                ",", " "
-            )
-        )
-
-    text = f"{your_cart_text}:\n\n{'-' * 20}\n\n"
-    text += "\n".join(items_text)
-    text += (
-        f"\n\n{'-' * 20}\n\n{total_text}: *{int(float(order.amount)):,} UZS*".replace(
-            ",", " "
-        )
-    )
-
-    response_text += f"\n\n{text}"
+    # your_cart_text = _("Products")
+    # total_text = _("Total")
+    #
+    # items_text = []
+    # for index, item in enumerate(cart_items, start=1):
+    #     items_text.append(
+    #         f"№{index} - *{item.product.title}*\n{item.quantity} x {int(float(item.product.price)):,} = *{int(float(item.amount)):,} UZS*".replace(
+    #             ",", " "
+    #         )
+    #     )
+    #
+    # text = f"{your_cart_text}:\n\n{'-' * 20}\n\n"
+    # text += "\n".join(items_text)
+    # text += (
+    #     f"\n\n{'-' * 20}\n\n{total_text}: *{int(float(order.amount)):,} UZS*".replace(
+    #         ",", " "
+    #     )
+    # )
+    #
+    # response_text += f"\n\n{text}"
 
     bot.answer_callback_query(call.id, text=response_text)
     bot.delete_message(chat_id=call.message.chat.id, message_id=call.message.message_id)

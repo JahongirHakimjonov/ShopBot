@@ -8,183 +8,438 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-14 11:48+0500\n"
-"PO-Revision-Date: 2025-02-14 11:46+0500\n"
+"POT-Creation-Date: 2025-02-22 12:27+0500\n"
+"PO-Revision-Date: 2025-02-22 16:09+0500\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
-"%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: apps/bot/handlers/cart.py:28 apps/bot/handlers/clear.py:30
+#: apps/bot/handlers/cart.py:41 apps/bot/handlers/cart.py:155
+#: apps/bot/handlers/clear.py:30 apps/bot/handlers/donate.py:133
+#: apps/bot/handlers/order.py:147
 msgid "User not found."
 msgstr "Пользователь не найден."
 
-#: apps/bot/handlers/cart.py:33 apps/bot/handlers/cart.py:38
+#: apps/bot/handlers/cart.py:46 apps/bot/handlers/cart.py:51
+#: apps/bot/handlers/cart.py:160 apps/bot/handlers/cart.py:165
 #: apps/bot/handlers/clear.py:37
 msgid "Cart is empty."
 msgstr "Корзина пуста."
 
-#: apps/bot/handlers/cart.py:41
+#: apps/bot/handlers/cart.py:54 apps/bot/handlers/cart.py:109
 msgid "pieces"
 msgstr "штук"
 
-#: apps/bot/handlers/cart.py:42 apps/bot/handlers/products.py:43
-#: apps/bot/handlers/products.py:81 apps/bot/handlers/products.py:127
-#: apps/bot/handlers/register.py:34 core/config/unfold_navigation.py:21
+#: apps/bot/handlers/cart.py:55 apps/bot/handlers/cart.py:169
+#: apps/bot/handlers/order.py:81 apps/bot/handlers/products.py:48
+#: apps/bot/handlers/products.py:69 apps/bot/handlers/products.py:92
+#: apps/bot/handlers/products.py:122 apps/bot/handlers/products.py:160
+#: apps/bot/handlers/products.py:191 apps/bot/handlers/register.py:50
+#: core/config/unfold_navigation.py:21
 msgid "Home"
-msgstr "Дом"
+msgstr "Домашняя страница"
 
-#: apps/bot/handlers/cart.py:43 apps/bot/handlers/register.py:26
+#: apps/bot/handlers/cart.py:56 apps/bot/handlers/cart.py:91
+#: apps/bot/handlers/cart.py:172 apps/bot/handlers/register.py:42
 msgid "Clear"
 msgstr "Очистить"
 
-#: apps/bot/handlers/cart.py:44 apps/bot/handlers/register.py:24
-#: apps/shop/models/order.py:50 core/config/unfold_navigation.py:98
+#: apps/bot/handlers/cart.py:57 apps/bot/handlers/cart.py:175
+#: apps/bot/handlers/register.py:40 apps/shop/models/order.py:55
+#: core/config/unfold_navigation.py:106
 msgid "Order"
-msgstr "Заказ"
+msgstr "Заказать"
 
-#: apps/bot/handlers/cart.py:45
+#: apps/bot/handlers/cart.py:58 apps/bot/handlers/order.py:218
+#: apps/shop/tasks/payment.py:40
 msgid "Total"
-msgstr "Всего"
+msgstr "Итого"
 
-#: apps/bot/handlers/cart.py:46
+#: apps/bot/handlers/cart.py:59
 msgid "Your cart"
 msgstr "Ваша корзина"
+
+#: apps/bot/handlers/cart.py:94
+msgid "➖"
+msgstr "➖"
+
+#: apps/bot/handlers/cart.py:96
+#, python-brace-format
+#| msgid "Quantity"
+msgid "{item.quantity}"
+msgstr "{item.quantity}"
+
+#: apps/bot/handlers/cart.py:98
+msgid "➕"
+msgstr "➕"
+
+#: apps/bot/handlers/cart.py:100
+msgid "Save"
+msgstr "Сохранить"
+
+#: apps/bot/handlers/cart.py:108
+msgid "Total amount"
+msgstr "Общая сумма"
+
+#: apps/bot/handlers/cart.py:185
+msgid "Invalid selection format or item not found."
+msgstr "Неверный формат выделения или элемент не найден."
+
+#: apps/bot/handlers/cart.py:203
+#| msgid "Invalid quantity selected."
+msgid "Invalid selection."
+msgstr "Неверный выбор."
+
+#: apps/bot/handlers/cart.py:216
+#| msgid "User not found."
+msgid "Item not found."
+msgstr "Элемент не найден."
+
+#: apps/bot/handlers/cart.py:254
+msgid "Quantity cannot be less than 1."
+msgstr "Количество не может быть меньше 1."
+
+#: apps/bot/handlers/cart.py:272
+msgid "Item removed from cart."
+msgstr "Предмет удалён из корзины."
+
+#: apps/bot/handlers/cart.py:289 apps/bot/handlers/cart.py:293
+msgid "Changes saved."
+msgstr "Изменения сохранены."
 
 #: apps/bot/handlers/clear.py:43
 msgid "Cart is cleared."
 msgstr "Корзина очищена."
 
-#: apps/bot/handlers/donate.py:50
+#: apps/bot/handlers/donate.py:44
+msgid "No donation options available."
+msgstr "Вариантов пожертвования нет."
+
+#: apps/bot/handlers/donate.py:57
+#| msgid "Cancelled"
+msgid "Cancel"
+msgstr "Отмена"
+
+#: apps/bot/handlers/donate.py:58
 msgid "Please select a donation amount:"
 msgstr "Пожалуйста, выберите сумму пожертвования:"
 
-#: apps/bot/handlers/donate.py:77 apps/shop/models/order.py:10
+#: apps/bot/handlers/donate.py:69 apps/bot/handlers/donate.py:94
+#: apps/shop/models/order.py:10
 msgid "Payme"
 msgstr "Payme"
 
-#: apps/bot/handlers/donate.py:78
+#: apps/bot/handlers/donate.py:74 apps/bot/handlers/donate.py:94
+#: apps/shop/models/order.py:11
 msgid "Click"
 msgstr "Click"
 
+#: apps/bot/handlers/donate.py:78 apps/bot/handlers/donate.py:98
+#: apps/bot/handlers/order.py:82 apps/bot/handlers/products.py:102
+#: apps/bot/handlers/products.py:131 apps/bot/handlers/products.py:149
+#: apps/bot/handlers/products.py:197
+msgid "Back"
+msgstr "Назад"
+
 #: apps/bot/handlers/donate.py:81
 #, python-brace-format
-msgid ""
-"Click the button below to complete your donation amount is {order."
-"amount:.2f}:"
+#| msgid "Please select a donation amount:"
+msgid "Please select a payment method to complete your donation of {amount}:"
 msgstr ""
-"Нажмите кнопку ниже, чтобы завершить сумму вашего пожертвования: {order."
-"amount:.2f}:"
+"Пожалуйста, выберите способ оплаты для завершения пожертвования {amount}:"
 
-#: apps/bot/handlers/donate.py:84
-msgid "Thank you for your donation!"
-msgstr "Спасибо за ваше пожертвование!"
+#: apps/bot/handlers/donate.py:101
+#, python-brace-format
+#| msgid ""
+#| "Click the button below to complete your donation amount is "
+#| "{order.amount:.2f}:"
+msgid "Click the button below to complete your donation of {amount}:"
+msgstr "Нажмите кнопку ниже, чтобы завершить пожертвование {amount}:"
+
+#: apps/bot/handlers/donate.py:140 apps/bot/handlers/donate.py:141
+msgid "Donation canceled."
+msgstr "Пожертвование отменено."
+
+#: apps/bot/handlers/donate.py:150
+msgid "Returning to donation options."
+msgstr "Вернуться к вариантам пожертвования."
+
+#: apps/bot/handlers/donate.py:161
+msgid "Invalid donation option."
+msgstr "Неверный вариант пожертвования."
+
+#: apps/bot/handlers/donate.py:178
+#| msgid "Invalid quantity selected."
+msgid "Donation amount selected."
+msgstr "Выбранная сумма пожертвования."
+
+#: apps/bot/handlers/donate.py:184
+#| msgid "Unknown action."
+msgid "Unrecognized action."
+msgstr "Нераспознанное действие."
+
+#: apps/bot/handlers/donate.py:200 apps/bot/handlers/donate.py:222
+#| msgid "User not found."
+msgid "Order not found."
+msgstr "Заказ не найден."
+
+#: apps/bot/handlers/donate.py:210
+msgid "Returning to payment selection."
+msgstr "Вернуться к выбору оплаты."
+
+#: apps/bot/handlers/donate.py:215
+msgid "Invalid payment data."
+msgstr "Неверные платежные данные."
+
+#: apps/bot/handlers/donate.py:241
+msgid "Unrecognized payment method."
+msgstr "Нераспознанный способ оплаты."
+
+#: apps/bot/handlers/help.py:25
+msgid "No help available."
+msgstr "Нет доступной помощи."
+
+#: apps/bot/handlers/info.py:25 apps/bot/handlers/user.py:29
+#| msgid "Products"
+msgid "Search Products"
+msgstr "Последние продукты"
+
+#: apps/bot/handlers/info.py:31
+msgid "No info available."
+msgstr "Нет информации."
 
 #: apps/bot/handlers/language.py:50
 msgid "Language updated successfully!"
 msgstr "Язык успешно обновлен!"
 
-#: apps/bot/handlers/products.py:33 apps/bot/handlers/products.py:71
-#: apps/bot/handlers/register.py:22 apps/bot/keyboard/home.py:8
+#: apps/bot/handlers/order.py:80
+msgid "Send location"
+msgstr "Отправить местоположение"
+
+#: apps/bot/handlers/order.py:85
+msgid "Please, send your location."
+msgstr "Пожалуйста, пришлите ваше местоположение."
+
+#: apps/bot/handlers/order.py:96
+msgid "Invalid location data. Please try again."
+msgstr "Неверные данные о местоположении. Пожалуйста, попробуйте ещё раз."
+
+#: apps/bot/handlers/order.py:108
+msgid "Send your phone"
+msgstr "Отправить телефон"
+
+#: apps/bot/handlers/order.py:110
+msgid "Please, send your phone number."
+msgstr "Пожалуйста, пришлите свой номер телефона."
+
+#: apps/bot/handlers/order.py:120
+msgid "Invalid contact information. Please try again."
+msgstr "Контактная информация неверна. Пожалуйста, попробуйте ещё раз."
+
+#: apps/bot/handlers/order.py:129
+msgid "I've saved your phone number."
+msgstr "Я сохранил ваш номер телефона."
+
+#: apps/bot/handlers/order.py:138
+#| msgid "Please select a category:"
+msgid "Please, select a payment method."
+msgstr "Пожалуйста, выберите способ оплаты."
+
+#: apps/bot/handlers/order.py:157
+#| msgid "Invalid quantity selected."
+msgid "Invalid payment method selected."
+msgstr "Выбран неверный способ оплаты."
+
+#: apps/bot/handlers/order.py:165
+msgid "Error retrieving your cart."
+msgstr "Ошибка извлечения вашей корзины."
+
+#: apps/bot/handlers/order.py:194
+msgid ""
+"You selected the Click payment method. The payment process is starting. "
+"Amount: {}"
+msgstr "Вы выбрали способ оплаты Click. Начинается процесс оплаты. Сумма: {}"
+
+#: apps/bot/handlers/order.py:203
+msgid ""
+"You selected the Payme payment method. The payment process is starting. "
+"Amount: {}"
+msgstr "Вы выбрали способ оплаты Payme. Процесс оплаты начинается. Сумма: {}"
+
+#: apps/bot/handlers/order.py:212
+#| msgid "Payme"
+msgid "Pay"
+msgstr "Платить"
+
+#: apps/bot/handlers/order.py:217 apps/bot/handlers/register.py:44
+#: apps/bot/keyboard/home.py:7 apps/shop/models/products.py:25
+#: apps/shop/tasks/payment.py:39 core/config/unfold_navigation.py:84
+msgid "Products"
+msgstr "Продукты"
+
+#: apps/bot/handlers/order.py:241
+msgid "Thanks"
+msgstr "Благодарность"
+
+#: apps/bot/handlers/privacy.py:25
+msgid "Read"
+msgstr "Читать"
+
+#: apps/bot/handlers/privacy.py:31
+msgid ""
+"This bot respects your privacy. By using this bot, you agree to our privacy "
+"policy. For more details, please read our full privacy policy by clicking "
+"the button below."
+msgstr ""
+"Этот бот уважает вашу конфиденциальность. Используя этого бота, вы "
+"соглашаетесь с нашей политикой конфиденциальности. Для получения "
+"дополнительной информации ознакомьтесь с нашей полной политикой "
+"конфиденциальности, нажав кнопку ниже."
+
+#: apps/bot/handlers/products.py:34
+msgid "No products available."
+msgstr "Товары недоступны."
+
+#: apps/bot/handlers/products.py:38 apps/bot/handlers/products.py:75
+#: apps/bot/handlers/products.py:92 apps/bot/handlers/products.py:128
+#: apps/bot/handlers/register.py:38 apps/bot/keyboard/home.py:8
 #: apps/shop/models/cart.py:25 apps/shop/models/cart.py:39
-#: core/config/unfold_navigation.py:109 core/config/unfold_navigation.py:144
-#: core/config/unfold_navigation.py:160
+#: core/config/unfold_navigation.py:117 core/config/unfold_navigation.py:168
+#: core/config/unfold_navigation.py:184
 msgid "Cart"
 msgstr "Корзина"
 
-#: apps/bot/handlers/products.py:46
+#: apps/bot/handlers/products.py:51
 msgid "Please select a category:"
 msgstr "Пожалуйста, выберите категорию:"
 
-#: apps/bot/handlers/products.py:84
+#: apps/bot/handlers/products.py:71 apps/bot/handlers/products.py:124
+#: apps/bot/handlers/products.py:193
+msgid "Welcome to the bot!"
+msgstr "Добро пожаловать в бот!"
+
+#: apps/bot/handlers/products.py:105
 msgid "Please select a product:"
 msgstr "Пожалуйста, выберите товар:"
 
-#: apps/bot/handlers/products.py:108
+#: apps/bot/handlers/products.py:141 apps/bot/handlers/user.py:38
 msgid "Product not found."
 msgstr "Товар не найден."
 
-#: apps/bot/handlers/products.py:112
+#: apps/bot/handlers/products.py:145
 msgid "Product is out of stock."
 msgstr "Товара нет в наличии."
 
-#: apps/bot/handlers/products.py:116
-msgid "Back"
-msgstr "Назад"
-
-#: apps/bot/handlers/products.py:129
+#: apps/bot/handlers/products.py:162
 #, python-brace-format
+#| msgid ""
+#| "{title}\n"
+#| "\n"
+#| "\t\t{description}\n"
+#| "\n"
+#| "Price: {price} UZS"
 msgid ""
 "{title}\n"
 "\n"
 "\t\t{description}\n"
 "\n"
-"Price: {price} UZS"
+"Price: *{price} UZS*"
 msgstr "{title} {description} Цена: {price} UZS"
 
-#: apps/bot/handlers/products.py:136
+#: apps/bot/handlers/products.py:173
 msgid "Please select the quantity:"
 msgstr "Пожалуйста, выберите количество:"
 
-#: apps/bot/handlers/products.py:156 apps/bot/handlers/products.py:160
+#: apps/bot/handlers/products.py:203 apps/bot/handlers/products.py:207
 msgid "Invalid quantity selected."
 msgstr "Неверное количество выбрано."
 
-#: apps/bot/handlers/products.py:169
+#: apps/bot/handlers/products.py:219
 msgid "Product added to cart."
 msgstr "Товар добавлен в корзину."
 
-#: apps/bot/handlers/register.py:20 apps/bot/keyboard/home.py:10
-#: apps/shop/admin/users.py:32 apps/shop/models/users.py:47
+#: apps/bot/handlers/register.py:36 apps/bot/keyboard/home.py:10
+#: apps/shop/admin/users.py:33 apps/shop/models/users.py:47
 msgid "Language"
 msgstr "Язык"
 
-#: apps/bot/handlers/register.py:28 apps/bot/keyboard/home.py:7
-#: apps/shop/models/products.py:25 core/config/unfold_navigation.py:76
-msgid "Products"
-msgstr "Продукты"
-
-#: apps/bot/handlers/register.py:30 apps/bot/keyboard/home.py:9
-#: apps/shop/models/info.py:13 core/config/unfold_navigation.py:117
+#: apps/bot/handlers/register.py:46 apps/bot/keyboard/home.py:9
+#: apps/shop/models/info.py:16 core/config/unfold_navigation.py:125
 msgid "Info"
 msgstr "Инфо"
 
-#: apps/bot/handlers/register.py:32 apps/bot/keyboard/home.py:11
-#: apps/shop/models/donate.py:14 apps/shop/models/order.py:20
-#: core/config/unfold_navigation.py:84
+#: apps/bot/handlers/register.py:48 apps/bot/keyboard/home.py:11
+#: apps/shop/models/donate.py:14 apps/shop/models/order.py:21
+#: core/config/unfold_navigation.py:92
 msgid "Donate"
 msgstr "Донат"
 
-#: apps/bot/handlers/register.py:39
+#: apps/bot/handlers/register.py:62
 msgid "Unknown command."
 msgstr "Неизвестная команда."
 
-#: apps/bot/handlers/register.py:60
+#: apps/bot/handlers/register.py:99
 msgid "Unknown action."
 msgstr "Неизвестное действие."
 
-#: apps/bot/handlers/user.py:25
+#: apps/bot/handlers/user.py:44
+#| msgid ""
+#| "{title}\n"
+#| "\n"
+#| "\t\t{description}\n"
+#| "\n"
+#| "Price: {price} UZS"
 msgid ""
-"Welcome to the bot! You can use the main menu to navigate the bot. If you "
-"have any questions, please contact the support team."
+"{product.title}\n"
+"\n"
+"\t\t{product.description}\n"
+"\n"
+"{int(float(product.price)):,} UZS"
 msgstr ""
-"Добро пожаловать в бот! Вы можете использовать главное меню для навигации по "
-"боту. Если у вас есть какие-либо вопросы, пожалуйста, свяжитесь с командой "
-"поддержки."
+"{product.title}\n"
+"\n"
+"{product.description}\n"
+"\n"
+"{int(float(product.price)):,} UZS"
 
-#: apps/bot/handlers/user.py:31
+#: apps/bot/handlers/user.py:56
+msgid "Payme Payment was successful. See latest products"
+msgstr "Payme Payment успешно завершен. Смотрите последние продукты"
+
+#: apps/bot/handlers/user.py:65
+msgid "Click Payment was successful. See latest products"
+msgstr "Click Payment успешно завершен. Смотрите последние продукты"
+
+#: apps/bot/handlers/user.py:72
+msgid ""
+"Welcome to the bot! You can search for products by clicking on the button "
+"below."
+msgstr "Добро пожаловать в бот! Вы можете искать товары, нажав кнопку ниже."
+
+#: apps/bot/handlers/user.py:83
+#, python-brace-format
+msgid ""
+"[{first_name}](tg://user?id={message.from_user.id}) Welcome to the bot! You "
+"can search for products by clicking on the button below."
+msgstr ""
+"[{first_name}] (tg://user?id={message.from_user.id}) Добро пожаловать в бот!"
+
+#: apps/bot/handlers/user.py:89
 msgid "An error occurred."
 msgstr "Ошибка произошла."
 
 #: apps/bot/middlewares/antiflood_middleware.py:18
 msgid "You are making request too often"
 msgstr "Вы делаете запрос слишком часто"
+
+#: apps/bot/query/inlinequery.py:40
+msgid "Ko'rish"
+msgstr "Видеть"
 
 #: apps/shared/models/base.py:6
 msgid "Created at"
@@ -222,11 +477,26 @@ msgstr "Доход за прошлую неделю"
 msgid "Last week expenses"
 msgstr "Расходы на прошлую неделю"
 
-#: apps/shop/admin/users.py:42 apps/shop/models/users.py:54
+#: apps/shop/admin/order.py:35
+#| msgid "Payment Status"
+msgid "Status"
+msgstr "Статус заказа"
+
+#: apps/shop/admin/order.py:46
+#| msgid "Payment Status"
+msgid "Payment Method"
+msgstr "Способ оплаты"
+
+#: apps/shop/admin/order.py:57
+#| msgid "Order Item"
+msgid "Order Type"
+msgstr "Тип заказа"
+
+#: apps/shop/admin/users.py:43 apps/shop/models/users.py:54
 msgid "Role"
 msgstr "Роль"
 
-#: apps/shop/admin/users.py:52 apps/shop/models/users.py:24
+#: apps/shop/admin/users.py:53 apps/shop/models/users.py:24
 msgid "Telegram ID"
 msgstr "Идентификатор Telegram"
 
@@ -243,7 +513,7 @@ msgstr "Сумма"
 msgid "Carts"
 msgstr "Корзина"
 
-#: apps/shop/models/cart.py:45 apps/shop/models/order.py:21
+#: apps/shop/models/cart.py:45 apps/shop/models/order.py:22
 #: apps/shop/models/products.py:24
 msgid "Product"
 msgstr "Продукт"
@@ -260,7 +530,7 @@ msgstr "Предмет из корзины"
 msgid "Cart items"
 msgstr "Предметы из корзины"
 
-#: apps/shop/models/category.py:8
+#: apps/shop/models/category.py:8 apps/shop/models/chat.py:9
 msgid "Name"
 msgstr "Название"
 
@@ -269,7 +539,7 @@ msgid "Is Active"
 msgstr "Активно"
 
 #: apps/shop/models/category.py:12 apps/shop/models/products.py:12
-#: core/config/unfold_navigation.py:68
+#: core/config/unfold_navigation.py:76
 msgid "Category"
 msgstr "Категория"
 
@@ -277,67 +547,104 @@ msgstr "Категория"
 msgid "Categories"
 msgstr "Категории"
 
-#: apps/shop/models/donate.py:11 apps/shop/models/info.py:10
+#: apps/shop/models/chat.py:11
+msgid "Chat ID"
+msgstr "Идентификатор чата"
+
+#: apps/shop/models/chat.py:13
+msgid "Type"
+msgstr "Тип"
+
+#: apps/shop/models/chat.py:15 apps/shop/models/donate.py:11
+#: apps/shop/models/help.py:10 apps/shop/models/info.py:13
 #: apps/shop/models/products.py:20
 msgid "Is active"
 msgstr "Активно"
+
+#: apps/shop/models/chat.py:18
+msgid "Chat"
+msgstr "Чат"
+
+#: apps/shop/models/chat.py:19 core/config/unfold_navigation.py:149
+msgid "Chats"
+msgstr "Чаты"
 
 #: apps/shop/models/donate.py:15
 msgid "Donates"
 msgstr "Пожертвования"
 
-#: apps/shop/models/info.py:8 apps/shop/models/news.py:8
+#: apps/shop/models/help.py:8 apps/shop/models/info.py:8
+#: apps/shop/models/news.py:8 apps/shop/models/news.py:28
 #: apps/shop/models/products.py:14
 msgid "Title"
 msgstr "Титул"
 
-#: apps/shop/models/info.py:9 apps/shop/models/news.py:9
-#: apps/shop/models/products.py:15
+#: apps/shop/models/help.py:9 apps/shop/models/info.py:9
+#: apps/shop/models/news.py:9 apps/shop/models/products.py:15
 msgid "Description"
 msgstr "Описание"
 
-#: apps/shop/models/info.py:14
-msgid "Infos"
-msgstr "Инфо"
+#: apps/shop/models/help.py:13 apps/shop/models/help.py:14
+#: core/config/unfold_navigation.py:141
+msgid "Help"
+msgstr "Помощь"
 
-#: apps/shop/models/news.py:11 apps/shop/models/products.py:19
+#: apps/shop/models/info.py:11 apps/shop/models/news.py:11
+#: apps/shop/models/products.py:19
 msgid "Image"
 msgstr "Изображение"
 
+#: apps/shop/models/info.py:17
+msgid "Infos"
+msgstr "Инфо"
+
 #: apps/shop/models/news.py:15 apps/shop/models/news.py:16
-#: core/config/unfold_navigation.py:125
+#: apps/shop/models/news.py:26 core/config/unfold_navigation.py:133
+#: core/config/unfold_navigation.py:200
 msgid "News"
 msgstr "Новости"
+
+#: apps/shop/models/news.py:29
+msgid "URL"
+msgstr "URL"
+
+#: apps/shop/models/news.py:32 core/config/unfold_navigation.py:204
+msgid "News Button"
+msgstr "Кнопка новостей"
+
+#: apps/shop/models/news.py:33
+msgid "News Buttons"
+msgstr "Новые кнопки"
 
 #: apps/shop/models/order.py:9
 msgid "Paynet"
 msgstr "Paynet"
 
-#: apps/shop/models/order.py:15
+#: apps/shop/models/order.py:16
 msgid "Pending"
 msgstr "В ожидании"
 
-#: apps/shop/models/order.py:16
+#: apps/shop/models/order.py:17
 msgid "Completed"
 msgstr "Завершено"
 
-#: apps/shop/models/order.py:17
+#: apps/shop/models/order.py:18
 msgid "Cancelled"
 msgstr "Отменено"
 
-#: apps/shop/models/order.py:41
+#: apps/shop/models/order.py:46
 msgid "Payment Status"
 msgstr "Статус оплаты"
 
-#: apps/shop/models/order.py:51
+#: apps/shop/models/order.py:56
 msgid "Orders"
 msgstr "Заказы"
 
-#: apps/shop/models/order.py:70
+#: apps/shop/models/order.py:79
 msgid "Order Item"
 msgstr "Предмет заказа"
 
-#: apps/shop/models/order.py:71
+#: apps/shop/models/order.py:80
 msgid "Order Items"
 msgstr "Предметы заказа"
 
@@ -385,16 +692,27 @@ msgstr "Номер телефона"
 msgid "Bot User"
 msgstr "Пользователь бота"
 
-#: apps/shop/models/users.py:60 core/config/unfold_navigation.py:51
-#: core/config/unfold_navigation.py:54
+#: apps/shop/models/users.py:60 core/config/unfold_navigation.py:59
+#: core/config/unfold_navigation.py:62
 msgid "Bot Users"
 msgstr "Пользователь бота"
+
+#: apps/shop/tasks/payment.py:70
+#, python-brace-format
+msgid "Your order has been successfully paid. Order ID: {order_id}"
+msgstr "Ваш заказ успешно оплачен. ID заказа: {order_id}"
+
+#: apps/shop/tasks/payment.py:72
+#, python-brace-format
+msgid "Your order has been cancelled. Order ID: {order_id}"
+msgstr "Ваш заказ отменён. ID заказа: {order_id}"
 
 #: assets/templates/admin/base_site.html:3 assets/templates/admin/index.html:8
 msgid "Django site admin"
 msgstr "Администратор сайта Django"
 
-#: assets/templates/admin/base_site.html:6 assets/templates/admin/index.html:18
+#: assets/templates/admin/base_site.html:6
+#: assets/templates/admin/index.html:18
 msgid "Django administration"
 msgstr "Администрация джанго"
 
@@ -430,21 +748,36 @@ msgstr "Пользователи"
 msgid "Groups"
 msgstr "Группы"
 
-#: core/config/unfold_navigation.py:65
+#: core/config/unfold_navigation.py:48
+msgid "Site"
+msgstr "Сайт"
+
+#: core/config/unfold_navigation.py:73
 msgid "MilliyTech Shop"
 msgstr "Магазин MilliyTech"
 
-#: core/config/unfold_navigation.py:95
+#: core/config/unfold_navigation.py:103
 msgid "MilliyTech Shop Additional"
 msgstr "Дополнительный Vibe Shop"
 
-#: core/config/unfold_navigation.py:148 core/config/unfold_navigation.py:164
+#: core/config/unfold_navigation.py:172 core/config/unfold_navigation.py:188
 msgid "Cart Item"
 msgstr "Предмет из корзины"
 
 #: core/settings.py:103
 msgid "Russia"
 msgstr "Россия"
+
+#~ msgid "Thank you for your donation!"
+#~ msgstr "Спасибо за ваше пожертвование!"
+
+#~ msgid ""
+#~ "Welcome to the bot! You can use the main menu to navigate the bot. If you "
+#~ "have any questions, please contact the support team."
+#~ msgstr ""
+#~ "Добро пожаловать в бот! Вы можете использовать главное меню для навигации по"
+#~ " боту. Если у вас есть какие-либо вопросы, пожалуйста, свяжитесь с командой "
+#~ "поддержки."
 
 #~ msgid "Til"
 #~ msgstr "Кронштейн"

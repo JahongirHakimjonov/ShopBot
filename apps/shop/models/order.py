@@ -58,7 +58,9 @@ class Order(AbstractBaseModel):
     @classmethod
     def pending_orders(cls):
         return cls.objects.filter(
-            status=cls.Status.PENDING, order_type=cls.OrderType.PRODUCT
+            status=cls.Status.PENDING,
+            order_type=cls.OrderType.PRODUCT,
+            payment_status=True,
         ).count()
 
 

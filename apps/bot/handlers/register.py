@@ -24,7 +24,7 @@ from apps.bot.handlers.language import handle_language, handle_language_selectio
 from apps.bot.handlers.order import handle_order, handle_payment
 from apps.bot.handlers.privacy import handle_privacy
 from apps.bot.handlers.products import handle_category
-from apps.bot.handlers.user import any_user
+from apps.bot.handlers.user import start_handler
 from apps.bot.keyboard import get_main_buttons
 from apps.bot.logger import logger
 from apps.bot.utils import update_or_create_user
@@ -47,8 +47,8 @@ def handle_message(message: Message, bot: TeleBot):
         handle_info(message, bot)
     elif message.text == _("Donate"):
         handle_donate(message, bot)
-    elif message.text == _("Home") or message.text == "/start":
-        any_user(message, bot)
+    elif message.text == _("Home"):
+        start_handler(message, bot)
     elif message.text == "/help":
         handle_help(message, bot)
     elif re.match(r"№\d+ -", message.text):

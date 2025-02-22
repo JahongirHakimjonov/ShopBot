@@ -1,7 +1,6 @@
 import os
 import sys
 
-from apps.bot.handlers.admin import admin_user
 
 # Add the project directory to the Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -19,7 +18,7 @@ import time
 import requests
 from apps.bot.conf import TOKEN
 from apps.bot.filters import AdminFilter
-from apps.bot.handlers.user import any_user
+from apps.bot.handlers.user import start_handler
 from apps.bot.middlewares import antispam_func
 from apps.bot.handlers.register import handle_message, handle_callback_query
 from telebot import TeleBot, apihelper
@@ -36,13 +35,13 @@ apihelper.ENABLE_MIDDLEWARE = True
 logger.info("Middlewares enabled")
 
 # I recommend increasing num_threads
-bot = TeleBot(TOKEN, num_threads=5)
+bot = TeleBot(TOKEN, num_threads=17)
 logger.info("Bot created")
 
 
 def register_handlers(bot: TeleBot):
     bot.register_message_handler(
-        any_user, commands=["start"], admin=False, pass_bot=True
+        start_handler, commands=["start"], admin=False, pass_bot=True
     )
     bot.register_message_handler(handle_message, content_types=["text"], pass_bot=True)
     bot.register_callback_query_handler(

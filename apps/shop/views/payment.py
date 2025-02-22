@@ -1,23 +1,12 @@
-import os
-
 from click_up.models import ClickTransaction
 from click_up.views import ClickWebhook
-from django.utils.translation import gettext as _
 from payme.models import PaymeTransactions
-from payme.types import response
 from payme.views import PaymeWebHookAPIView
 from rest_framework.permissions import AllowAny
-from telebot import TeleBot
 
 from apps.shop.models.cart import Cart
 from apps.shop.models.order import Order
-
-bot = TeleBot(os.getenv("BOT_TOKEN"))
-
-
-def notify_user(user, message):
-    if user.telegram_id:
-        bot.send_message(chat_id=user.telegram_id, text=message)
+from apps.shop.signals.signals import order_status_updated
 
 
 def update_order_status(order, status, is_completed=False):
@@ -33,7 +22,7 @@ class PaymeCallBackAPIView(PaymeWebHookAPIView):
     def check_perform_transaction(self, params):
         account = self.fetch_account(params)
         self.validate_amount(account, params.get("amount"))
-        return response.CheckPerformTransaction(allow=True).as_resp()
+        return self.response.CheckPerformTransaction(allow=True).as_resp()
 
     def handle_payment(self, params, success):
         transaction = PaymeTransactions.get_by_transaction_id(params["id"])
@@ -41,12 +30,10 @@ class PaymeCallBackAPIView(PaymeWebHookAPIView):
         order = update_order_status(order, success, success)
         Cart.objects.filter(user=order.user).delete()
 
-        message = (
-            _("Your order has been successfully paid. Order ID: {order_id}")
-            if success
-            else _("Your order has been cancelled. Order ID: {order_id}")
-        )
-        notify_user(order.user, message.format(order_id=order.id))
+        # Send signal for asynchronous notifications
+        order_status_updated.send(sender=self.__class__, order=order, success=success)
+        print(f"payment {'successful' if success else 'cancelled'} params: {params}")
+        return order
 
     def handle_successfully_payment(self, params, result, *args, **kwargs):
         self.handle_payment(params, success=True)
@@ -62,13 +49,10 @@ class ClickWebhookAPIView(ClickWebhook):
         order = update_order_status(order, success, success)
         Cart.objects.filter(user=order.user).delete()
 
-        message = (
-            _("Your order has been successfully paid. Order ID: {order_id}")
-            if success
-            else _("Your order has been cancelled. Order ID: {order_id}")
-        )
-        notify_user(order.user, message.format(order_id=order.id))
+        # Send signal for asynchronous notifications
+        order_status_updated.send(sender=self.__class__, order=order, success=success)
         print(f"payment {'successful' if success else 'cancelled'} params: {params}")
+        return order
 
     def successfully_payment(self, params):
         self.handle_payment(params, success=True)

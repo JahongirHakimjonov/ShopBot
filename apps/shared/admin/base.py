@@ -2,11 +2,13 @@ from django.contrib import admin
 from django.contrib.auth.admin import GroupAdmin as BaseGroupAdmin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from django.contrib.auth.models import Group, User
+from django.contrib.sites.models import Site
 from unfold.admin import ModelAdmin
 from unfold.forms import UserChangeForm, UserCreationForm, AdminPasswordChangeForm
 
 admin.site.unregister(Group)
 admin.site.unregister(User)
+admin.site.unregister(Site)
 
 
 @admin.register(Group)
@@ -27,3 +29,12 @@ class UserAdmin(BaseUserAdmin, ModelAdmin):
     ordering = ("username",)
     list_editable = ("is_active", "is_staff", "is_superuser")
     filter_vertical = ("groups", "user_permissions")
+
+
+@admin.register(Site)
+class SiteAdmin(ModelAdmin):
+    list_display = ("id", "domain", "name")
+    search_fields = ("domain", "name")
+    list_editable = ("name",)
+    list_display_links = ("domain", "id")
+    ordering = ("domain",)

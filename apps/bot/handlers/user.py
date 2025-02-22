@@ -1,3 +1,5 @@
+import re
+
 from django.utils.translation import activate, gettext as _
 from telebot import TeleBot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
@@ -10,7 +12,7 @@ from apps.bot.utils.language import set_language_code
 from apps.shop.models.products import Product
 
 
-def any_user(message: Message, bot: TeleBot):
+def start_handler(message: Message, bot: TeleBot):
     try:
         activate(set_language_code(message.from_user.id))
         update_or_create_user(
@@ -28,7 +30,7 @@ def any_user(message: Message, bot: TeleBot):
         )
         inline_keyboard.add(inline_button)
 
-        if message.text.startswith("/start "):
+        if message.text.startswith("/start ") and re.match(r"/start \d+", message.text):
             product_id = message.text.split(" ")[1]
             try:
                 product = Product.objects.get(id=product_id)
@@ -38,10 +40,34 @@ def any_user(message: Message, bot: TeleBot):
             bot.send_photo(
                 message.chat.id,
                 photo=product.image,
-                caption=_(
-                    f"{product.title}\n\n\t\t{product.description}\n\n{int(float(product.price)):,} UZS".replace(
-                        ",", " "
-                    )
+                caption=f"{product.title}\n\n\t\t{product.description}\n\n{int(float(product.price)):,} UZS".replace(
+                    ",", " "
+                ),
+                reply_markup=inline_keyboard,
+            )
+        elif (
+            message.text.startswith("/start ")
+            and message.text.split(" ")[1] == "success-payme"
+        ):
+            bot.send_message(
+                message.chat.id,
+                _("Payme Payment was successful. See latest products"),
+                reply_markup=inline_keyboard,
+            )
+        elif (
+            message.text.startswith("/start ")
+            and message.text.split(" ")[1] == "success-click"
+        ):
+            bot.send_message(
+                message.chat.id,
+                _("Click Payment was successful. See latest products"),
+                reply_markup=inline_keyboard,
+            )
+        else:
+            bot.send_message(
+                message.chat.id,
+                _(
+                    "Welcome to the bot! You can search for products by clicking on the button below."
                 ),
                 reply_markup=inline_keyboard,
             )

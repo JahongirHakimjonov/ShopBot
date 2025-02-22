@@ -1,3 +1,4 @@
+from django.contrib.sites.models import Site
 from django.utils.translation import activate, gettext as _
 from telebot.types import (
     InlineQueryResultArticle,
@@ -30,8 +31,9 @@ def query_text(bot, query):
             "-created_at"
         )[:25]
         for product in products:
-            # thumbnail_url = f"{os.getenv('BASE_URL')}{product.image.url}"
-            thumbnail_url = "https://child-protection.felixits.uz/media/avatars/IMG_20240406_200729_995.jpg"
+            get_current = Site.objects.get_current().domain
+            thumbnail_url = f"{get_current}{product.image.url}"
+            # thumbnail_url = "https://child-protection.felixits.uz/media/avatars/IMG_20240406_200729_995.jpg"
             bot_url = get_bot_url(bot)
             keyboard = InlineKeyboardMarkup()
             button = InlineKeyboardButton(

@@ -13,7 +13,7 @@ from telebot.types import (
 
 from apps.bot.handlers.clear import handle_clear
 from apps.bot.handlers.order import handle_order
-from apps.bot.handlers.user import any_user
+from apps.bot.handlers.user import start_handler
 from apps.bot.keyboard import get_main_buttons
 from apps.bot.logger import logger
 from apps.bot.utils import update_or_create_user
@@ -93,7 +93,7 @@ def build_cart_item_keyboard(item):
     keyboard.row(
         InlineKeyboardButton(text=_("➖"), callback_data=f"minus_{item.id}"),
         InlineKeyboardButton(
-            text=_(f"{item.quantity}"), callback_data=f"quantity_{item.id}"
+            text=f"{item.quantity}", callback_data=f"quantity_{item.id}"
         ),
         InlineKeyboardButton(text=_("➕"), callback_data=f"plus_{item.id}"),
     )
@@ -167,7 +167,7 @@ def handle_cart_selection(message, bot: TeleBot):
 
     text = message.text
     if text == _("Home"):
-        any_user(message, bot)
+        start_handler(message, bot)
         return
     elif text == _("Clear"):
         handle_clear(message, bot)

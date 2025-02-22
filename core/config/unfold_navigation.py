@@ -44,6 +44,14 @@ PAGES = [
                     request.user, "view_user"
                 ),
             },
+            {
+                "title": _("Site"),
+                "icon": "captive_portal",
+                "link": reverse_lazy("admin:sites_site_changelist"),
+                "permission": lambda request: user_has_group_or_permission(
+                    request.user, "view_site"
+                ),
+            },
         ],
     },
     {
@@ -135,6 +143,14 @@ PAGES = [
                 "link": reverse_lazy("admin:shop_help_changelist"),
                 "permission": lambda request: user_has_group_or_permission(
                     request.user, "view_help"
+                ),
+            },
+            {
+                "title": _("Chats"),
+                "icon": "forum",
+                "link": reverse_lazy("admin:shop_chat_changelist"),
+                "permission": lambda request: user_has_group_or_permission(
+                    request.user, "view_chat"
                 ),
             },
         ],

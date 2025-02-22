@@ -8,178 +8,432 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-14 11:48+0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2025-02-22 12:27+0500\n"
+"PO-Revision-Date: 2025-02-22 15:50+0500\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
 
-#: apps/bot/handlers/cart.py:28 apps/bot/handlers/clear.py:30
+#: apps/bot/handlers/cart.py:41 apps/bot/handlers/cart.py:155
+#: apps/bot/handlers/clear.py:30 apps/bot/handlers/donate.py:133
+#: apps/bot/handlers/order.py:147
 msgid "User not found."
 msgstr "Foydalanuvchi topilmadi."
 
-#: apps/bot/handlers/cart.py:33 apps/bot/handlers/cart.py:38
+#: apps/bot/handlers/cart.py:46 apps/bot/handlers/cart.py:51
+#: apps/bot/handlers/cart.py:160 apps/bot/handlers/cart.py:165
 #: apps/bot/handlers/clear.py:37
-#, fuzzy
 #| msgid "Cart item"
 msgid "Cart is empty."
-msgstr "Savatcha buyumi"
+msgstr "Savatcha bo'sh"
 
-#: apps/bot/handlers/cart.py:41
+#: apps/bot/handlers/cart.py:54 apps/bot/handlers/cart.py:109
 msgid "pieces"
 msgstr "dona"
 
-#: apps/bot/handlers/cart.py:42 apps/bot/handlers/products.py:43
-#: apps/bot/handlers/products.py:81 apps/bot/handlers/products.py:127
-#: apps/bot/handlers/register.py:34 core/config/unfold_navigation.py:21
+#: apps/bot/handlers/cart.py:55 apps/bot/handlers/cart.py:169
+#: apps/bot/handlers/order.py:81 apps/bot/handlers/products.py:48
+#: apps/bot/handlers/products.py:69 apps/bot/handlers/products.py:92
+#: apps/bot/handlers/products.py:122 apps/bot/handlers/products.py:160
+#: apps/bot/handlers/products.py:191 apps/bot/handlers/register.py:50
+#: core/config/unfold_navigation.py:21
 msgid "Home"
-msgstr "Uy"
+msgstr "Bosh sahifa"
 
-#: apps/bot/handlers/cart.py:43 apps/bot/handlers/register.py:26
+#: apps/bot/handlers/cart.py:56 apps/bot/handlers/cart.py:91
+#: apps/bot/handlers/cart.py:172 apps/bot/handlers/register.py:42
 msgid "Clear"
-msgstr "ravshan"
+msgstr "Tozalash"
 
-#: apps/bot/handlers/cart.py:44 apps/bot/handlers/register.py:24
-#: apps/shop/models/order.py:50 core/config/unfold_navigation.py:98
+#: apps/bot/handlers/cart.py:57 apps/bot/handlers/cart.py:175
+#: apps/bot/handlers/register.py:40 apps/shop/models/order.py:55
+#: core/config/unfold_navigation.py:106
 msgid "Order"
-msgstr "Tartib"
+msgstr "Buyurtma berish"
 
-#: apps/bot/handlers/cart.py:45
+#: apps/bot/handlers/cart.py:58 apps/bot/handlers/order.py:218
+#: apps/shop/tasks/payment.py:40
 msgid "Total"
 msgstr "Jami"
 
-#: apps/bot/handlers/cart.py:46
+#: apps/bot/handlers/cart.py:59
 msgid "Your cart"
 msgstr "Savatchangiz"
+
+#: apps/bot/handlers/cart.py:94
+msgid "➖"
+msgstr "➖"
+
+#: apps/bot/handlers/cart.py:96
+#, python-brace-format
+#| msgid "Quantity"
+msgid "{item.quantity}"
+msgstr "{item.quantity}"
+
+#: apps/bot/handlers/cart.py:98
+msgid "➕"
+msgstr "➕"
+
+#: apps/bot/handlers/cart.py:100
+msgid "Save"
+msgstr "Saqlash"
+
+#: apps/bot/handlers/cart.py:108
+msgid "Total amount"
+msgstr "Jami summa"
+
+#: apps/bot/handlers/cart.py:185
+msgid "Invalid selection format or item not found."
+msgstr "Yaroqsiz tanlov formati yoki element topilmadi."
+
+#: apps/bot/handlers/cart.py:203
+#| msgid "Invalid quantity selected."
+msgid "Invalid selection."
+msgstr "Yaroqsiz miqdor tanlandi."
+
+#: apps/bot/handlers/cart.py:216
+#| msgid "User not found."
+msgid "Item not found."
+msgstr "Element topilmadi."
+
+#: apps/bot/handlers/cart.py:254
+msgid "Quantity cannot be less than 1."
+msgstr "Miqdor 1 dan kichik bo‘lishi mumkin emas."
+
+#: apps/bot/handlers/cart.py:272
+msgid "Item removed from cart."
+msgstr "Mahsulot savatdan olib tashlandi."
+
+#: apps/bot/handlers/cart.py:289 apps/bot/handlers/cart.py:293
+msgid "Changes saved."
+msgstr "O‘zgarishlar saqlandi."
 
 #: apps/bot/handlers/clear.py:43
 msgid "Cart is cleared."
 msgstr "Savat tozalandi."
 
-#: apps/bot/handlers/donate.py:50
-msgid "Please select a donation amount:"
-msgstr "Xayriya miqdorini tanlang:"
+#: apps/bot/handlers/donate.py:44
+msgid "No donation options available."
+msgstr "Donat ma'lumotlari mavjud emas."
 
-#: apps/bot/handlers/donate.py:77 apps/shop/models/order.py:10
+#: apps/bot/handlers/donate.py:57
+#| msgid "Cancelled"
+msgid "Cancel"
+msgstr "Bekor qilish."
+
+#: apps/bot/handlers/donate.py:58
+msgid "Please select a donation amount:"
+msgstr "Donat miqdorini tanlang:"
+
+#: apps/bot/handlers/donate.py:69 apps/bot/handlers/donate.py:94
+#: apps/shop/models/order.py:10
 msgid "Payme"
 msgstr "Payme"
 
-#: apps/bot/handlers/donate.py:78
+#: apps/bot/handlers/donate.py:74 apps/bot/handlers/donate.py:94
+#: apps/shop/models/order.py:11
 msgid "Click"
-msgstr "Chertmoq"
+msgstr "Click"
+
+#: apps/bot/handlers/donate.py:78 apps/bot/handlers/donate.py:98
+#: apps/bot/handlers/order.py:82 apps/bot/handlers/products.py:102
+#: apps/bot/handlers/products.py:131 apps/bot/handlers/products.py:149
+#: apps/bot/handlers/products.py:197
+msgid "Back"
+msgstr "Ortga"
 
 #: apps/bot/handlers/donate.py:81
 #, python-brace-format
-msgid ""
-"Click the button below to complete your donation amount is {order."
-"amount:.2f}:"
-msgstr ""
-"{order.amount:.2f} miqdoridagi xayriyangizni yakunlash uchun quyidagi "
-"tugmani bosing:"
+#| msgid "Please select a donation amount:"
+msgid "Please select a payment method to complete your donation of {amount}:"
+msgstr "{amount} miqdoridagi donatni yakunlash uchun toʻlov usulini tanlang:"
 
-#: apps/bot/handlers/donate.py:84
-msgid "Thank you for your donation!"
-msgstr "Xayriyangiz uchun tashakkur!"
+#: apps/bot/handlers/donate.py:101
+#, python-brace-format
+#| msgid ""
+#| "Click the button below to complete your donation amount is "
+#| "{order.amount:.2f}:"
+msgid "Click the button below to complete your donation of {amount}:"
+msgstr "{amount} miqdoridagi donatni yakunlash uchun quyidagi tugmani bosing:"
+
+#: apps/bot/handlers/donate.py:140 apps/bot/handlers/donate.py:141
+msgid "Donation canceled."
+msgstr "Donat bekor qilindi."
+
+#: apps/bot/handlers/donate.py:150
+msgid "Returning to donation options."
+msgstr "Donat variantlariga qaytish."
+
+#: apps/bot/handlers/donate.py:161
+msgid "Invalid donation option."
+msgstr "Donat varianti yaroqsiz."
+
+#: apps/bot/handlers/donate.py:178
+#| msgid "Invalid quantity selected."
+msgid "Donation amount selected."
+msgstr "Donat miqdori tanlangan."
+
+#: apps/bot/handlers/donate.py:184
+#| msgid "Unknown action."
+msgid "Unrecognized action."
+msgstr "Noma'lum harakat."
+
+#: apps/bot/handlers/donate.py:200 apps/bot/handlers/donate.py:222
+#| msgid "User not found."
+msgid "Order not found."
+msgstr "Buyurtma topilmadi"
+
+#: apps/bot/handlers/donate.py:210
+msgid "Returning to payment selection."
+msgstr "To‘lovni tanlashga qaytish."
+
+#: apps/bot/handlers/donate.py:215
+msgid "Invalid payment data."
+msgstr "To‘lov ma’lumotlari xato."
+
+#: apps/bot/handlers/donate.py:241
+msgid "Unrecognized payment method."
+msgstr "Tan olinmagan to‘lov usuli."
+
+#: apps/bot/handlers/help.py:25
+msgid "No help available."
+msgstr "Yordam xizmati mavjud emas."
+
+#: apps/bot/handlers/info.py:25 apps/bot/handlers/user.py:29
+#| msgid "Products"
+msgid "Search Products"
+msgstr "So'nggi mahsulotlar."
+
+#: apps/bot/handlers/info.py:31
+msgid "No info available."
+msgstr "Hech qanday axborot mavjud emas."
 
 #: apps/bot/handlers/language.py:50
 msgid "Language updated successfully!"
 msgstr "Til yangilandi!"
 
-#: apps/bot/handlers/products.py:33 apps/bot/handlers/products.py:71
-#: apps/bot/handlers/register.py:22 apps/bot/keyboard/home.py:8
-#: apps/shop/models/cart.py:25 apps/shop/models/cart.py:39
-#: core/config/unfold_navigation.py:109 core/config/unfold_navigation.py:144
-#: core/config/unfold_navigation.py:160
-msgid "Cart"
-msgstr "arava"
+#: apps/bot/handlers/order.py:80
+msgid "Send location"
+msgstr "Joylashuvni yuborish"
 
-#: apps/bot/handlers/products.py:46
+#: apps/bot/handlers/order.py:85
+msgid "Please, send your location."
+msgstr "Iltimos, joylashuvingizni yuboring."
+
+#: apps/bot/handlers/order.py:96
+msgid "Invalid location data. Please try again."
+msgstr "Joylashuv axboroti yaroqsiz. Qayta urining."
+
+#: apps/bot/handlers/order.py:108
+msgid "Send your phone"
+msgstr "Telefoningizni yuboring"
+
+#: apps/bot/handlers/order.py:110
+msgid "Please, send your phone number."
+msgstr "Iltimos, telefon raqamingizni yuboring."
+
+#: apps/bot/handlers/order.py:120
+msgid "Invalid contact information. Please try again."
+msgstr "Kontakt axboroti yaroqsiz. Qayta urining."
+
+#: apps/bot/handlers/order.py:129
+msgid "I've saved your phone number."
+msgstr "Telefon raqamingizni saqlab qo‘ydim."
+
+#: apps/bot/handlers/order.py:138
+#| msgid "Please select a category:"
+msgid "Please, select a payment method."
+msgstr "To'lov turini tanlang."
+
+#: apps/bot/handlers/order.py:157
+#| msgid "Invalid quantity selected."
+msgid "Invalid payment method selected."
+msgstr "Yaroqsiz to'lov turi tanlandi."
+
+#: apps/bot/handlers/order.py:165
+msgid "Error retrieving your cart."
+msgstr "Savatingizni olishda xatolik yuz berdi."
+
+#: apps/bot/handlers/order.py:194
+msgid ""
+"You selected the Click payment method. The payment process is starting. "
+"Amount: {}"
+msgstr ""
+"Click to‘lov usulini tanladingiz. To‘lov jarayoni boshlanmoqda. Summa: {}"
+
+#: apps/bot/handlers/order.py:203
+msgid ""
+"You selected the Payme payment method. The payment process is starting. "
+"Amount: {}"
+msgstr ""
+"Payme to‘lov usulini tanladingiz. To‘lov jarayoni boshlanmoqda. Summa: {}"
+
+#: apps/bot/handlers/order.py:212
+#| msgid "Payme"
+msgid "Pay"
+msgstr "To'lash"
+
+#: apps/bot/handlers/order.py:217 apps/bot/handlers/register.py:44
+#: apps/bot/keyboard/home.py:7 apps/shop/models/products.py:25
+#: apps/shop/tasks/payment.py:39 core/config/unfold_navigation.py:84
+msgid "Products"
+msgstr "Mahsulotlar"
+
+#: apps/bot/handlers/order.py:241
+msgid "Thanks"
+msgstr "Rahmat"
+
+#: apps/bot/handlers/privacy.py:25
+msgid "Read"
+msgstr "O‘qish"
+
+#: apps/bot/handlers/privacy.py:31
+msgid ""
+"This bot respects your privacy. By using this bot, you agree to our privacy "
+"policy. For more details, please read our full privacy policy by clicking "
+"the button below."
+msgstr ""
+"Bu bot maxfiyligingizni hurmat qiladi. Bu botdan foydalanish orqali "
+"maxfiylik siyosatimizga rozilik bildirasiz. Tafsilotlar uchun quyidagi "
+"tugmani bosib, maxfiylik siyosatimizni to‘liq o‘qing."
+
+#: apps/bot/handlers/products.py:34
+msgid "No products available."
+msgstr "Hech qanday mahsulot mavjud emas."
+
+#: apps/bot/handlers/products.py:38 apps/bot/handlers/products.py:75
+#: apps/bot/handlers/products.py:92 apps/bot/handlers/products.py:128
+#: apps/bot/handlers/register.py:38 apps/bot/keyboard/home.py:8
+#: apps/shop/models/cart.py:25 apps/shop/models/cart.py:39
+#: core/config/unfold_navigation.py:117 core/config/unfold_navigation.py:168
+#: core/config/unfold_navigation.py:184
+msgid "Cart"
+msgstr "Savatcha"
+
+#: apps/bot/handlers/products.py:51
 msgid "Please select a category:"
 msgstr "Turkumni tanlang:"
 
-#: apps/bot/handlers/products.py:84
+#: apps/bot/handlers/products.py:71 apps/bot/handlers/products.py:124
+#: apps/bot/handlers/products.py:193
+msgid "Welcome to the bot!"
+msgstr "Botga xush kelibsiz!"
+
+#: apps/bot/handlers/products.py:105
 msgid "Please select a product:"
 msgstr "Mahsulotni tanlang:"
 
-#: apps/bot/handlers/products.py:108
-#, fuzzy
+#: apps/bot/handlers/products.py:141 apps/bot/handlers/user.py:38
 #| msgid "Production"
 msgid "Product not found."
-msgstr "Ishlab chiqarish"
+msgstr "Mahsulot topilmadi."
 
-#: apps/bot/handlers/products.py:112
+#: apps/bot/handlers/products.py:145
 msgid "Product is out of stock."
 msgstr "Mahsulot zaxirada qolmagan."
 
-#: apps/bot/handlers/products.py:116
-msgid "Back"
-msgstr "Orqa"
-
-#: apps/bot/handlers/products.py:129
+#: apps/bot/handlers/products.py:162
 #, python-brace-format
+#| msgid ""
+#| "{title}\n"
+#| "\n"
+#| "\t\t{description}\n"
+#| "\n"
+#| "Price: {price} UZS"
 msgid ""
 "{title}\n"
 "\n"
 "\t\t{description}\n"
 "\n"
-"Price: {price} UZS"
-msgstr "{title} {description} Narxi: {price} UZS"
+"Price: *{price} UZS*"
+msgstr "{title} {description} Narxi: *{price} UZS*"
 
-#: apps/bot/handlers/products.py:136
+#: apps/bot/handlers/products.py:173
 msgid "Please select the quantity:"
 msgstr "Miqdorni tanlang:"
 
-#: apps/bot/handlers/products.py:156 apps/bot/handlers/products.py:160
+#: apps/bot/handlers/products.py:203 apps/bot/handlers/products.py:207
 msgid "Invalid quantity selected."
 msgstr "Yaroqsiz miqdor tanlandi."
 
-#: apps/bot/handlers/products.py:169
+#: apps/bot/handlers/products.py:219
 msgid "Product added to cart."
-msgstr "Mahsulot savatchaga kiritildi."
+msgstr "Mahsulot savatchaga saqlandi."
 
-#: apps/bot/handlers/register.py:20 apps/bot/keyboard/home.py:10
-#: apps/shop/admin/users.py:32 apps/shop/models/users.py:47
+#: apps/bot/handlers/register.py:36 apps/bot/keyboard/home.py:10
+#: apps/shop/admin/users.py:33 apps/shop/models/users.py:47
 msgid "Language"
 msgstr "Til"
 
-#: apps/bot/handlers/register.py:28 apps/bot/keyboard/home.py:7
-#: apps/shop/models/products.py:25 core/config/unfold_navigation.py:76
-msgid "Products"
-msgstr "Mahsulotlar"
-
-#: apps/bot/handlers/register.py:30 apps/bot/keyboard/home.py:9
-#: apps/shop/models/info.py:13 core/config/unfold_navigation.py:117
+#: apps/bot/handlers/register.py:46 apps/bot/keyboard/home.py:9
+#: apps/shop/models/info.py:16 core/config/unfold_navigation.py:125
 msgid "Info"
 msgstr "Ma’lumot"
 
-#: apps/bot/handlers/register.py:32 apps/bot/keyboard/home.py:11
-#: apps/shop/models/donate.py:14 apps/shop/models/order.py:20
-#: core/config/unfold_navigation.py:84
+#: apps/bot/handlers/register.py:48 apps/bot/keyboard/home.py:11
+#: apps/shop/models/donate.py:14 apps/shop/models/order.py:21
+#: core/config/unfold_navigation.py:92
 msgid "Donate"
-msgstr "Xayriya qilmoq"
+msgstr "Donat"
 
-#: apps/bot/handlers/register.py:39
+#: apps/bot/handlers/register.py:62
 msgid "Unknown command."
 msgstr "Noma’lum komanda."
 
-#: apps/bot/handlers/register.py:60
+#: apps/bot/handlers/register.py:99
 msgid "Unknown action."
 msgstr "Noma’lum harakat."
 
-#: apps/bot/handlers/user.py:25
+#: apps/bot/handlers/user.py:44
+#| msgid ""
+#| "{title}\n"
+#| "\n"
+#| "\t\t{description}\n"
+#| "\n"
+#| "Price: {price} UZS"
 msgid ""
-"Welcome to the bot! You can use the main menu to navigate the bot. If you "
-"have any questions, please contact the support team."
+"{product.title}\n"
+"\n"
+"\t\t{product.description}\n"
+"\n"
+"{int(float(product.price)):,} UZS"
 msgstr ""
-"Botga xush kelibsiz! Botda harakatlanish uchun asosiy menyudan "
-"foydalanishingiz mumkin. Savollaringiz bo‘lsa, qo‘llab-quvvatlash jamoasiga "
-"murojaat qiling."
+"{product.title}\n"
+"\n"
+"{product.description}\n"
+"\n"
+"{int(float(product.price)):,} UZS"
 
-#: apps/bot/handlers/user.py:31
+#: apps/bot/handlers/user.py:56
+msgid "Payme Payment was successful. See latest products"
+msgstr "Payme Payment amalga oshdi. Oxirgi mahsulotlar bilan tanishing"
+
+#: apps/bot/handlers/user.py:65
+msgid "Click Payment was successful. See latest products"
+msgstr "Click Payment amalga oshdi. Eng oxirgi mahsulotlar bilan tanishing"
+
+#: apps/bot/handlers/user.py:72
+msgid ""
+"Welcome to the bot! You can search for products by clicking on the button "
+"below."
+msgstr ""
+"Botga xush kelibsiz! Quyidagi tugmani bosish orqali mahsulotlarni "
+"qidirishingiz mumkin."
+
+#: apps/bot/handlers/user.py:83
+#, python-brace-format
+msgid ""
+"[{first_name}](tg://user?id={message.from_user.id}) Welcome to the bot! You "
+"can search for products by clicking on the button below."
+msgstr ""
+"[{first_name}] (tg://user?id={message.from_user.id}) Botga xush kelibsiz!"
+
+#: apps/bot/handlers/user.py:89
 msgid "An error occurred."
 msgstr "Xatolik yuz berdi."
 
@@ -187,17 +441,21 @@ msgstr "Xatolik yuz berdi."
 msgid "You are making request too often"
 msgstr "Juda ko‘p so‘rov yuboryapsiz"
 
+#: apps/bot/query/inlinequery.py:40
+msgid "Ko'rish"
+msgstr "Ko‘rish"
+
 #: apps/shared/models/base.py:6
 msgid "Created at"
-msgstr ""
+msgstr "Yaratilgan sana:"
 
 #: apps/shared/models/base.py:7
 msgid "Updated at"
-msgstr ""
+msgstr "Yangilangan sana:"
 
 #: apps/shared/views/dashboard.py:43 assets/templates/admin/index.html:8
 msgid "Dashboard"
-msgstr "Asboblar paneli"
+msgstr "Dashboard"
 
 #: apps/shared/views/dashboard.py:44
 msgid "Analytics"
@@ -223,11 +481,26 @@ msgstr "O‘tgan hafta daromadi"
 msgid "Last week expenses"
 msgstr "O‘tgan hafta xarajatlari"
 
-#: apps/shop/admin/users.py:42 apps/shop/models/users.py:54
-msgid "Role"
-msgstr "rol"
+#: apps/shop/admin/order.py:35
+#| msgid "Payment Status"
+msgid "Status"
+msgstr "Buyurtma holati"
 
-#: apps/shop/admin/users.py:52 apps/shop/models/users.py:24
+#: apps/shop/admin/order.py:46
+#| msgid "Payment Status"
+msgid "Payment Method"
+msgstr "To‘lov turi"
+
+#: apps/shop/admin/order.py:57
+#| msgid "Order Item"
+msgid "Order Type"
+msgstr "Buyurtma turi"
+
+#: apps/shop/admin/users.py:43 apps/shop/models/users.py:54
+msgid "Role"
+msgstr "Rol"
+
+#: apps/shop/admin/users.py:53 apps/shop/models/users.py:24
 msgid "Telegram ID"
 msgstr "Telegram ID"
 
@@ -244,7 +517,7 @@ msgstr "Miqdor"
 msgid "Carts"
 msgstr "Aravalar"
 
-#: apps/shop/models/cart.py:45 apps/shop/models/order.py:21
+#: apps/shop/models/cart.py:45 apps/shop/models/order.py:22
 #: apps/shop/models/products.py:24
 msgid "Product"
 msgstr "Mahsulot"
@@ -261,7 +534,7 @@ msgstr "Savatcha buyumi"
 msgid "Cart items"
 msgstr "Savat buyumlari"
 
-#: apps/shop/models/category.py:8
+#: apps/shop/models/category.py:8 apps/shop/models/chat.py:9
 msgid "Name"
 msgstr "Nomi"
 
@@ -270,7 +543,7 @@ msgid "Is Active"
 msgstr "Faol"
 
 #: apps/shop/models/category.py:12 apps/shop/models/products.py:12
-#: core/config/unfold_navigation.py:68
+#: core/config/unfold_navigation.py:76
 msgid "Category"
 msgstr "Toifa"
 
@@ -278,67 +551,104 @@ msgstr "Toifa"
 msgid "Categories"
 msgstr "Turkumlar"
 
-#: apps/shop/models/donate.py:11 apps/shop/models/info.py:10
+#: apps/shop/models/chat.py:11
+msgid "Chat ID"
+msgstr "Chat ID"
+
+#: apps/shop/models/chat.py:13
+msgid "Type"
+msgstr "Tur"
+
+#: apps/shop/models/chat.py:15 apps/shop/models/donate.py:11
+#: apps/shop/models/help.py:10 apps/shop/models/info.py:13
 #: apps/shop/models/products.py:20
 msgid "Is active"
 msgstr "Faol"
+
+#: apps/shop/models/chat.py:18
+msgid "Chat"
+msgstr "Suhbat"
+
+#: apps/shop/models/chat.py:19 core/config/unfold_navigation.py:149
+msgid "Chats"
+msgstr "Chatlar"
 
 #: apps/shop/models/donate.py:15
 msgid "Donates"
 msgstr "Xayriya qiladi"
 
-#: apps/shop/models/info.py:8 apps/shop/models/news.py:8
+#: apps/shop/models/help.py:8 apps/shop/models/info.py:8
+#: apps/shop/models/news.py:8 apps/shop/models/news.py:28
 #: apps/shop/models/products.py:14
 msgid "Title"
 msgstr "Sarlavha"
 
-#: apps/shop/models/info.py:9 apps/shop/models/news.py:9
-#: apps/shop/models/products.py:15
+#: apps/shop/models/help.py:9 apps/shop/models/info.py:9
+#: apps/shop/models/news.py:9 apps/shop/models/products.py:15
 msgid "Description"
 msgstr "Tavsif"
 
-#: apps/shop/models/info.py:14
-msgid "Infos"
-msgstr "Ma’lumot"
+#: apps/shop/models/help.py:13 apps/shop/models/help.py:14
+#: core/config/unfold_navigation.py:141
+msgid "Help"
+msgstr "Yordam"
 
-#: apps/shop/models/news.py:11 apps/shop/models/products.py:19
+#: apps/shop/models/info.py:11 apps/shop/models/news.py:11
+#: apps/shop/models/products.py:19
 msgid "Image"
 msgstr "Tasvir"
 
+#: apps/shop/models/info.py:17
+msgid "Infos"
+msgstr "Ma’lumot"
+
 #: apps/shop/models/news.py:15 apps/shop/models/news.py:16
-#: core/config/unfold_navigation.py:125
+#: apps/shop/models/news.py:26 core/config/unfold_navigation.py:133
+#: core/config/unfold_navigation.py:200
 msgid "News"
 msgstr "Yangiliklar"
+
+#: apps/shop/models/news.py:29
+msgid "URL"
+msgstr "URL manzil"
+
+#: apps/shop/models/news.py:32 core/config/unfold_navigation.py:204
+msgid "News Button"
+msgstr "Yangiliklar tugmasi"
+
+#: apps/shop/models/news.py:33
+msgid "News Buttons"
+msgstr "Yangiliklar tugmalari"
 
 #: apps/shop/models/order.py:9
 msgid "Paynet"
 msgstr "Paynet"
 
-#: apps/shop/models/order.py:15
+#: apps/shop/models/order.py:16
 msgid "Pending"
 msgstr "Kutilmoqda"
 
-#: apps/shop/models/order.py:16
+#: apps/shop/models/order.py:17
 msgid "Completed"
 msgstr "Bajarildi"
 
-#: apps/shop/models/order.py:17
+#: apps/shop/models/order.py:18
 msgid "Cancelled"
 msgstr "Bekor qilindi"
 
-#: apps/shop/models/order.py:41
+#: apps/shop/models/order.py:46
 msgid "Payment Status"
 msgstr "To‘lov holati"
 
-#: apps/shop/models/order.py:51
+#: apps/shop/models/order.py:56
 msgid "Orders"
 msgstr "Buyurtmalar"
 
-#: apps/shop/models/order.py:70
+#: apps/shop/models/order.py:79
 msgid "Order Item"
 msgstr "Buyurtma buyumi"
 
-#: apps/shop/models/order.py:71
+#: apps/shop/models/order.py:80
 msgid "Order Items"
 msgstr "Buyurtma elementlari"
 
@@ -359,55 +669,60 @@ msgid "Uzbek"
 msgstr "o‘zbek"
 
 #: apps/shop/models/users.py:20
-#, fuzzy
 #| msgid "Russia"
 msgid "Russian"
 msgstr "Rossiya"
 
 #: apps/shop/models/users.py:29
-#, fuzzy
 #| msgid "User"
 msgid "Username"
-msgstr "Foydalanuvchi"
+msgstr "Foydalanuvchi nomi"
 
 #: apps/shop/models/users.py:32
 msgid "First Name"
 msgstr "Ismi"
 
 #: apps/shop/models/users.py:35
-#, fuzzy
 #| msgid "Name"
 msgid "Last Name"
-msgstr "Nomi"
+msgstr "Familiya"
 
 #: apps/shop/models/users.py:38
-#, fuzzy
 #| msgid "Name"
 msgid "Full Name"
-msgstr "Nomi"
+msgstr "To'liq ismi"
 
 #: apps/shop/models/users.py:41
 msgid "Phone Number"
 msgstr "Telefon raqami"
 
 #: apps/shop/models/users.py:59 apps/shop/models/users.py:64
-#, fuzzy
 #| msgid "User"
 msgid "Bot User"
-msgstr "Foydalanuvchi"
+msgstr "Bot Foydalanuvchi"
 
-#: apps/shop/models/users.py:60 core/config/unfold_navigation.py:51
-#: core/config/unfold_navigation.py:54
-#, fuzzy
+#: apps/shop/models/users.py:60 core/config/unfold_navigation.py:59
+#: core/config/unfold_navigation.py:62
 #| msgid "User"
 msgid "Bot Users"
-msgstr "Foydalanuvchi"
+msgstr "Bot Foydalanuvchilari"
+
+#: apps/shop/tasks/payment.py:70
+#, python-brace-format
+msgid "Your order has been successfully paid. Order ID: {order_id}"
+msgstr "Buyurtmangiz to‘langan. Buyurtma ID: {order_id}"
+
+#: apps/shop/tasks/payment.py:72
+#, python-brace-format
+msgid "Your order has been cancelled. Order ID: {order_id}"
+msgstr "Buyurtmangiz bekor qilindi. Buyurtma ID: {order_id}"
 
 #: assets/templates/admin/base_site.html:3 assets/templates/admin/index.html:8
 msgid "Django site admin"
 msgstr "Django sayti administratori"
 
-#: assets/templates/admin/base_site.html:6 assets/templates/admin/index.html:18
+#: assets/templates/admin/base_site.html:6
+#: assets/templates/admin/index.html:18
 msgid "Django administration"
 msgstr "Django boshqaruvi"
 
@@ -436,32 +751,45 @@ msgid "Production"
 msgstr "Ishlab chiqarish"
 
 #: core/config/unfold_navigation.py:29 core/config/unfold_navigation.py:40
-#, fuzzy
 #| msgid "User"
 msgid "Users"
-msgstr "Foydalanuvchi"
+msgstr "Foydalanuvchilar"
 
 #: core/config/unfold_navigation.py:32
 msgid "Groups"
 msgstr "Guruhlar"
 
-#: core/config/unfold_navigation.py:65
+#: core/config/unfold_navigation.py:48
+msgid "Site"
+msgstr "Sayt"
+
+#: core/config/unfold_navigation.py:73
 msgid "MilliyTech Shop"
 msgstr "MilliyTech do‘koni"
 
-#: core/config/unfold_navigation.py:95
-#, fuzzy
+#: core/config/unfold_navigation.py:103
 #| msgid "Vibe Shop Additional"
 msgid "MilliyTech Shop Additional"
-msgstr "Vibe Shop qo‘shimcha"
+msgstr "MilliyTech Shop qo'shimcha"
 
-#: core/config/unfold_navigation.py:148 core/config/unfold_navigation.py:164
+#: core/config/unfold_navigation.py:172 core/config/unfold_navigation.py:188
 msgid "Cart Item"
-msgstr "Savatcha buyumi"
+msgstr "Savatcha ma'lumotlari"
 
 #: core/settings.py:103
 msgid "Russia"
 msgstr "Rossiya"
+
+#~ msgid "Thank you for your donation!"
+#~ msgstr "Xayriyangiz uchun tashakkur!"
+
+#~ msgid ""
+#~ "Welcome to the bot! You can use the main menu to navigate the bot. If you "
+#~ "have any questions, please contact the support team."
+#~ msgstr ""
+#~ "Botga xush kelibsiz! Botda harakatlanish uchun asosiy menyudan "
+#~ "foydalanishingiz mumkin. Savollaringiz bo‘lsa, qo‘llab-quvvatlash jamoasiga "
+#~ "murojaat qiling."
 
 #~ msgid "Til"
 #~ msgstr "Til"

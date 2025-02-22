@@ -64,7 +64,7 @@ def query_text(bot, query):
             message_text = (
                 f"*{escaped_title}*\n\n"
                 f"{escaped_description}\n\n"
-                f"{formatted_price} [ ]({escaped_thumbnail})"
+                f"*{formatted_price}* [ ]({thumbnail_url})"
             )
 
             link_preview_options = LinkPreviewOptions(show_above_text=True)

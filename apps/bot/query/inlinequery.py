@@ -32,8 +32,7 @@ def query_text(bot, query):
         )[:25]
         for product in products:
             get_current = Site.objects.get_current().domain
-            thumbnail_url = f"{get_current}{product.image.url}"
-            # thumbnail_url = "https://child-protection.felixits.uz/media/avatars/IMG_20240406_200729_995.jpg"
+            thumbnail_url = f"https://{get_current}{product.image.url}"
             bot_url = get_bot_url(bot)
             keyboard = InlineKeyboardMarkup()
             button = InlineKeyboardButton(
@@ -49,7 +48,7 @@ def query_text(bot, query):
                 description=f"{int(float(product.price)):,} UZS".replace(",", " "),
                 thumbnail_url=thumbnail_url,
                 input_message_content=InputTextMessageContent(
-                    message_text=f"*{product.title}*\n\n\t\t{product.description}\n\n{int(float(product.price)):,}[ ]({thumbnail_url})UZS".replace(
+                    message_text=f"*{product.title}*\n\n\t\t{product.description}\n\n{int(float(product.price)):,} UZS [ ]({thumbnail_url})".replace(
                         ",", " "
                     ),
                     parse_mode="Markdown",

@@ -1,9 +1,0 @@
-{
-    "dirs": {
-        "apps": "./",
-        "locale": "./locale/"
-    },
-    "stubs": {
-        "admin": "django/admin.stub"
-    }
-}
